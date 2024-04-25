@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
 import { FaStar } from "react-icons/fa6";
+import ImageSlider from "./ImageSlider";
 
 
 const About = () => {
 
     return (
-        <div className="px-5">
+        <div className="px-2">
 
             <div className='w-[100%] p-3 flex justify-start flex-row mb-9 gap-x-2'>
 
@@ -16,32 +17,27 @@ const About = () => {
                     <div className="flex justify-center flex-col px-8 md:justify-start">
                         <p className=" mb-6 text-center">Our peanuts are carefully selected, roasted to perfection, and packed with `nutrients.Whether you're looking for a healthy snack or versatile ingredient, Fralon Peanuts has you covered.</p>
 
-                        <div className="flex justify-center flex-row gap-x-6">
+                        <div className="flex flex-row gap-x-6 justify-center">
                             <Link to="cart"
-                                className="p-3 text-2xl font-bold rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-sans">Shop</Link>
-                            <Link className="p-5 bg-slate-100 border-black border-2 hover:bg-slate-200">Learn More</Link>
+                                className="p-3 text-center text-xl font-bold rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-sans">Shop Now</Link>
+
                         </div>
                     </div>
                 </div>
             </div>
 
 
+            <div
+                className="my-10 flex flex-col p-3"
+            ><ImageSlider /></div>
 
-            <div className=' flex justify-center w-[100%] bg-slate-100 mt-6 py-8 mb-[100px]'>
-                < img
-                    src='src/assets/collection.jpg'
-                    className=' px-8  h-[300px] mt-5 mb-3'
-                    style={{ mixBlendMode: 'multiply' }}
-                />
-
-            </div>
 
 
             <article
                 id="article"
-                className="flex justify-start flex-row p-[2rem] mt-9 gap-x-6 border-b-2">
+                className="flex justify-start flex-row gap-x-6 border-b-2 py-6 px-4 my-5">
                 <div className="w-[50%] ">
-                    <h2 className="text-center text-3xl font-bold text-yellow-400 mb-3">Discover the Delicious Variety of Peanut Products at Fralon Peanuts</h2>
+                    <h2 className="text-center text-3xl font-bold text-yellow-400 my-9">Discover the Delicious Variety of Peanut Products at Fralon Peanuts</h2>
                     <p className="text-left ">At Fralon Peanuts, we offer a wide range of peanut products, including peanut butter, roasted peanuts, and ground peanuts. Our products are made with the highest quality peanuts and are packed with flavor and nutrition. Whether you're looking for a tasty snack or a versatile ingredient for your recipes, we have the perfect peanut product for you.</p>
                     <div className="flex justify-start gap-x-9 flex-row mt-4">
                         <div className=" block p-3">
@@ -54,13 +50,13 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-[50%] h-[550px] px-3">
+                <div className="flex justify-center items-center h-fit px-3">
                     <img src="src/assets/pbonboard.jpg" alt="pbon board" className="h-full"
                     />
                 </div>
             </article>
 
-            <section className="flex justify-around flex-row flex-wrap mt-[60px] md:flex-col mb-4 gap-x-3">
+            <section className="flex justify-around flex-row flex-wrap mt-[80px] md:flex-col mb-4 gap-x-3">
                 <div className="flex justify-center flex-col gap-y-6 mb-6">
                     <h3 className="text-2xl font-bold text-yellow-400">Delicious and Nutritious Peanut Products</h3>
                     <p>Discover the natural ingredients, health benefits, and local sourcing behind our premium peanut products.</p>
@@ -86,23 +82,23 @@ const About = () => {
             <section
                 id="section"
                 className="flex justify-evenly flex-row gap-x-3 mt-[100px] border-t-2 py-9 ">
-                <div className="w-[50%] py-5">
+                <div className="w-[50%] py-5 flex justify-center flex-col p-3">
                     <img src="src/assets/roast.jpg" alt="roasted"
                     />
                 </div>
 
 
                 <div className="w-[50%]">
-                    <h3 className="font-bold text-2xl mb-4 text-yellow-400">Discover the Health Benefits of Fralon Peanuts' Nutritious Products</h3>
+                    <h3 className="font-bold text-2xl mb-8 text-yellow-400 mt-[80px]">Discover the Health Benefits of Fralon Peanuts' Nutritious Products</h3>
                     <p>At Fralon Peanuts, we offer a range of delicious and nutritious peanut products that provide numerous health benefits. Our peanuts are packed with essential nutrients, making them a great addition to a balanced diet.</p>
 
-                    <div className="flex justify-start flex-row mt-7 gap-x-9">
+                    <div className="flex justify-start flex-row mt-7 gap-x-9 p-3">
                         <div className="flex justify-center flex-col">
-                            <h2 className="font-semibold text-2xl p-3">Rich In</h2>
+                            <h2 className="font-bold text-2xl p-3">Rich In</h2>
                             <p>protein, fiber, and healthy fats, our peanuts promote heart health, aid in weight management, and support digestion.</p>
                         </div>
                         <div className="flex justify-center flex-col">
-                            <h2 className="font-semibold text-2xl p-3">Boost your</h2>
+                            <h2 className="font-bold text-2xl p-3">Boost your</h2>
                             <p>immune system with the antioxidant properties of our peanuts, which help fight off harmful free radicals.</p>
 
                         </div>
@@ -111,7 +107,7 @@ const About = () => {
             </section>
             <div
                 id="testimonials"
-                className="py-6 mt-[150px] flex justify-start flex-col gap-x-6 border-t-2 md:flex-row">
+                className="py-6 mt-[130px] flex justify-start flex-col gap-x-6 border-t-2 md:flex-row p-8">
                 <div className="h-[50%] w-full">
                     <img src="src/assets/client2.jpg" alt="placeholder"
                         className="md:w-[50%]"
@@ -134,10 +130,10 @@ const About = () => {
                 </div>
             </div>
 
-            <section className="flex justify-between border-t-2 flex-row mt-[60px] p-8 gap-x-3 border-b-2 items-center">
-                <div className="flex justify-between flex-col">
-                    <div >
-                        <h2 className="font-bold text-3xl text-yellow-400 mt-[8rem]">Discover Our Peanut Products</h2>
+            <section className="flex justify-between border-t-2 flex-col mt-[60px] p-6 gap-x-3 border-b-2 items-center md:flex-row">
+                <div className="flex justify-between flex-col md:w-[50%] w-[100%]">
+                    <div  >
+                        <h2 className="font-bold text-3xl text-yellow-400 mt-[60px]">Discover Our Peanut Products</h2>
                         <p className="py-4">Explore our wide range of delicious peanut products, perfect for any occasion.Our shop is stocked with an assortment of mouthwatering options, ranging from classic creamy peanut butter to gourmet peanut-infused treats.</p>
                     </div>
                     <div className="flex justify-start flex-row">
@@ -148,7 +144,7 @@ const About = () => {
 
                     </div>
                 </div>
-                <div className="mt-8">
+                <div className=" flex justify-center p-3 mt-8 md:w-[50%] w-[100%]">
                     <img src="src/assets/pbspoon.jpg" alt="pbon spoon"
                     />
                 </div>

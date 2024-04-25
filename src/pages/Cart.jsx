@@ -13,7 +13,7 @@ const Cart = () => {
     return (
         <div
             id="cart-container"
-            className='flex justify-start flex-col md:flex-row gap-2'>
+            className='flex justify-start flex-col md:flex-row gap-2 items-center'>
             <ul
                 id="cart-ul"
                 className="flex justify-start p-3 flex-col items-center md:w-[65%] w-[100%]">

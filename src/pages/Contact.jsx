@@ -16,14 +16,15 @@ const Contact = () => {
 
 
     return (
-        <div className='flex flex-col justify-start'>
+        <div className='flex flex-col justify-center'>
+            <h2 className="text-center text-3xl text-yellow-400 font-bold p-6">Get in touch with Fralon</h2>
             <section className="p-3 mb-9 ml-4">
                 <p className="text-left">Delicious</p>
-                <h2 className="text-3xl font-bold text-yellow-400 text-left">Contact Information</h2>
+                <h2 className="text-3xl font-bold text-yellow-400 text-left my-2">Contact Information</h2>
                 <p className="text-left">We'd love to hear from you. Reach out to us using any of the methods below.</p>
 
-                <div className="flex justify-between flex-row p-4 mt-8">
-                    <div className="w-[50%]">
+                <div className="flex justify-between flex-col p-4 md:flex-row mt-8 items-center">
+                    <div className="flex justify-start flex-col flex-wrap p-">
 
                         <h3 className="text-lg font-semibold mt-3">Email</h3>
                         <CiMail
@@ -46,8 +47,8 @@ const Contact = () => {
                         <p>Nairobi, Kenya</p>
                         <p>Get Directions </p>
                     </div>
-                    <div className="w-[50%]">
-                        <img src="src/assets/agent.jpg" alt=""
+                    <div className="mt-6 flex items-center">
+                        <img src="src/assets/agent.jpg" alt="customer service agents"
 
                         />
                     </div>
@@ -59,18 +60,18 @@ const Contact = () => {
 
 
             <p className="ml-6">Fresh</p>
-            <h2 className='text-3xl text-yellow-400 font-bold font-sans ml-4'>Get in touch</h2>
-            <section className='text-center font-sans p-4'>
+            <h2 className='text-3xl text-yellow-400 font-bold font-sans ml-5 my-2'>Get in touch</h2>
+            <section className='text-center font-sans p-4 mb-8'>
                 <p className="text-left mb-3 ml-1">Have a question or need assistance? We're here to help!</p>
                 < Form />
 
 
             </section>
 
-            <section className='mb-5  flex  justify-evenly  flex-row gap-x-9 mt-6'>
+            <section className='flex  justify-evenly  flex-row gap-x-9'>
                 <div className="flex justify-start flex-col p-3">
                     <p className="text-left ml-3">Delicious</p>
-                    <h2 className='text-left text-yellow-400 font-bold text-3xl p-2'>Get in touch</h2>
+                    <h2 className='text-left text-yellow-400 font-bold text-3xl p-2 my-2'>Get in touch</h2>
                     <p className="ml-3">Find our location near you and discover our delicious peanut products.</p>
                 </div>
                 <div className="p-10 mr-8">
@@ -90,7 +91,7 @@ const Contact = () => {
                     <Link className='mb-5 text-lg text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.snapchat.com">
                         <FaSnapchatSquare
                         />Snapchat</Link>
-                    <Link className='mb-5 text-lg text-center flex flex-row justify-start items-center hover:text-yellow-400 gap-2 ' to="www.tiktok.com">
+                    <Link className='text-lg text-center flex flex-row justify-start items-center hover:text-yellow-400 gap-2 ' to="www.tiktok.com">
                         <FaTiktok
                             className="hover:text-yellow-500"
                         />
@@ -98,13 +99,13 @@ const Contact = () => {
                 </div>
             </section>
 
-            <section className="p-20 flex justify-center flex-col">
+            <section className=" p-3 flex flex-col w-[100%]">
                 <img src="src/assets/place.svg" alt="maps"
-                    className="w-full h-fit"
+                    className="h-[500px]"
                 />
             </section>
 
-            <article className="mt-8 p-5 flex gap-4 justify-center items-center flex-col ">
+            <article className=" p-5 flex gap-4 justify-center items-center flex-col ">
 
                 <p>Delicious</p>
                 <h2 className="text-3xl font-bold text-yellow-400">Our amazing team</h2>
@@ -130,8 +131,8 @@ const Contact = () => {
 
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 text-center">
                         <div className="bg-white rounded-lg p-4 text-center">
-                            <img src="src/assets/client1.jpg" alt="clients" className="w-full mb-2 rounded-md" />
-                            <p>John Doe</p>
+                            <img src="src/assets/client2.jpg" alt="clients" className="w-full mb-2 rounded-md" />
+                            <p>Brenda Smith</p>
                             <p>Co Founder</p>
                             <p>Jane is passionate about technology and leads our technical team with precision.</p>
                             <div
@@ -147,7 +148,7 @@ const Contact = () => {
 
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
                         <div className="bg-white rounded-lg p-4 text-center">
-                            <img src="src/assets/client1.jpg" alt="clients" className="w-full mb-2 rounded-md" />
+                            <img src="src/assets/client3.jpg" alt="clients" className="w-full mb-2 rounded-md" />
                             <p>Michael Smith</p>
                             <p>Marketing Director</p>
                             <p>Michael is dedicated to creating impactful marketing campaigns that resonate with clients.</p>

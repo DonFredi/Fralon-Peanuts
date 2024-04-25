@@ -1,8 +1,9 @@
-import React, { createContext, useEffect, useReducer } from 'react';
+import React, { createContext, useEffect, useReducer, useState } from 'react';
 import product1 from '../assets/bread.jpg';
 import product2 from '../assets/butter.jpg';
 import product3 from '../assets/roasted.jpg';
 import product4 from '../assets/peanut.jpg';
+import product5 from '../assets/collection.jpg';
 import useWindowSize from '../components/useWindowSize';
 
 const DataContext = createContext({});
@@ -51,121 +52,231 @@ const initialState = {
             details: "Experience peanut butter perfection in a petite package with our 250g jar of creamy delight. Designed for those who appreciate quality in small doses, this jar is the epitome of convenience without compromise. Whether you're topping your morning oatmeal, stirring into yogurt, or simply enjoying it by the spoonful, this jar ensures you can enjoy the wholesome goodness of peanut butter wherever you go."
         }
     ],
+    recipes: [
+        {
+            id: 0,
+            name: "Peanut Butter Cookies",
+            image: "src/assets/cookies.jpg",
+            introduction: "These classic peanut butter cookies are a crowd favorite and perfect for any occasion.",
+            ingredients: [
+                "1 cup peanut butter",
+                "1 cup granulated sugar",
+                "1 egg",
+                "1 teaspoon vanilla extract",
+                "1/2 teaspoon baking soda",
+                "Pinch of salt"
+            ],
+            instructions: [
+                "Preheat the oven to 350°F (175°C) and line a baking sheet with parchment paper.",
+                "In a mixing bowl, cream together the peanut butter and sugar until smooth.",
+                "Add the egg, vanilla extract, baking soda, and salt, and mix until well combined.",
+                "Roll the dough into small balls and place them on the prepared baking sheet.",
+                "Use a fork to gently flatten each ball, creating a crisscross pattern.",
+                "Bake for 10-12 minutes, or until the edges are lightly golden.",
+                "Allow the cookies to cool on the baking sheet for a few minutes before transferring them to a wire rack to cool completely."
+            ],
+            nutritionalInfo: {
+                calories: 120,
+                fat: 8,
+                protein: 4,
+                carbohydrates: 10
+            },
+            variations: [
+                "Add chocolate chips for a twist.",
+                "Substitute almond butter for peanut butter for a different flavor profile.",
+                "Use coconut sugar or honey instead of granulated sugar for a healthier option."
+            ],
+            tips: [
+                "For extra chewy cookies, slightly under-bake them and allow them to cool on the baking sheet.",
+                "Store leftovers in an airtight container at room temperature for up to one week."
+            ]
+        },
+        {
+            id: 1,
+            name: "Peanut Butter Smoothie",
+            image: "src/assets/smoothie.jpg",
+            introduction: "This creamy peanut butter smoothie is a delicious and nutritious way to start your day.",
+            ingredients: [
+                "1 banana, frozen",
+                "1/4 cup peanut butter",
+                "1 cup almond milk",
+                "1 tablespoon honey",
+                "1/2 teaspoon cinnamon",
+                "Handful of ice cubes"
+            ],
+            instructions: [
+                "Combine all ingredients in a blender.",
+                "Blend until smooth and creamy.",
+                "Pour into glasses and serve immediately."
+            ],
+            nutritionalInfo: {
+                calories: 280,
+                fat: 15,
+                protein: 7,
+                carbohydrates: 30
+            },
+            variations: [
+                "Add a handful of spinach for extra nutrition.",
+                "Use Greek yogurt for added creaminess and protein.",
+                "Top with a sprinkle of crushed peanuts for texture."
+            ],
+            tips: [
+                "Adjust the sweetness by adding more or less honey, according to your taste preference.",
+                "Feel free to customize with your favorite fruits or add-ins."
+            ]
+        },
+        {
+            id: 2,
+            name: "Peanut Butter Energy Balls",
+            image: "src/assets/energy_balls.jpg",
+            introduction: "These peanut butter energy balls are perfect for a quick and healthy snack on the go.",
+            ingredients: [
+                "1 cup rolled oats",
+                "1/2 cup peanut butter",
+                "1/4 cup honey",
+                "1/4 cup mini chocolate chips",
+                "1/4 cup chopped peanuts",
+                "1 teaspoon vanilla extract"
+            ],
+            instructions: [
+                "In a mixing bowl, combine all ingredients until well mixed.",
+                "Roll the mixture into small balls, about 1 inch in diameter.",
+                "Place the balls on a baking sheet lined with parchment paper.",
+                "Chill in the refrigerator for at least 30 minutes to firm up.",
+                "Store in an airtight container in the refrigerator for up to one week."
+            ],
+            nutritionalInfo: {
+                calories: 120,
+                fat: 6,
+                protein: 3,
+                carbohydrates: 15
+            },
+            variations: [
+                "Swap out the chocolate chips for dried fruit for a different flavor.",
+                "Add a scoop of protein powder for extra protein.",
+                "Coat the balls in shredded coconut or cocoa powder for added texture."
+            ],
+            tips: [
+                "Feel free to customize with your favorite mix-ins, such as chia seeds, flaxseed, or shredded coconut.",
+                "These energy balls are great for pre or post-workout snacks."
+            ]
+        },
+        {
+            id: 3,
+            name: "Thai Peanut Noodles",
+            image: "src/assets/peanut_noodles.jpeg",
+            introduction: "These Thai-inspired peanut noodles are packed with flavor and make for a satisfying meal.",
+            ingredients: [
+                "8 oz (225g) rice noodles",
+                "1/4 cup creamy peanut butter",
+                "3 tablespoons soy sauce",
+                "2 tablespoons lime juice",
+                "2 tablespoons brown sugar",
+                "1 tablespoon sesame oil",
+                "2 cloves garlic, minced",
+                "1 teaspoon grated ginger",
+                "1/4 cup chopped peanuts, for garnish",
+                "2 green onions, sliced, for garnish",
+                "1/4 cup chopped cilantro, for garnish"
+            ],
+            instructions: [
+                "Cook the rice noodles according to package instructions. Drain and set aside.",
+                "In a small bowl, whisk together the peanut butter, soy sauce, lime juice, brown sugar, sesame oil, garlic, and ginger until smooth.",
+                "Toss the cooked noodles with the peanut sauce until evenly coated.",
+                "Divide the noodles into serving bowls and garnish with chopped peanuts, sliced green onions, and chopped cilantro.",
+                "Serve immediately and enjoy!"
+            ],
+            nutritionalInfo: {
+                calories: 400,
+                fat: 15,
+                protein: 10,
+                carbohydrates: 60
+            },
+            variations: [
+                "Add cooked chicken, shrimp, or tofu for extra protein.",
+                "For a spicier kick, add sriracha or red pepper flakes to the peanut sauce.",
+                "Use zucchini noodles or spaghetti squash for a low-carb option."
+            ],
+            tips: [
+                "To make ahead, store the peanut sauce separately from the noodles and toss together just before serving.",
+                "Feel free to customize with your favorite vegetables, such as bell peppers, carrots, or broccoli."
+            ]
+        },
+        {
+            id: 4,
+            name: "Peanut Butter Banana Smoothie",
+            image: "src/assets/peanut_butter_smoothie.jpeg",
+            introduction: "This creamy and nutritious smoothie is a perfect way to start your day or refuel after a workout.",
+            ingredients: [
+                "1 ripe banana",
+                "2 tablespoons creamy peanut butter",
+                "1/2 cup Greek yogurt",
+                "1/2 cup milk of your choice",
+                "1 tablespoon honey or maple syrup",
+                "1/2 teaspoon vanilla extract",
+                "Handful of ice cubes"
+            ],
+            instructions: [
+                "In a blender, combine the banana, peanut butter, Greek yogurt, milk, honey or maple syrup, vanilla extract, and ice cubes.",
+                "Blend until smooth and creamy, adding more milk if necessary to reach your desired consistency.",
+                "Pour into glasses and serve immediately, optionally garnishing with a sprinkle of cinnamon or a drizzle of honey."
+            ],
+            nutritionalInfo: {
+                calories: 300,
+                fat: 12,
+                protein: 15,
+                carbohydrates: 35
+            },
+            variations: [
+                "Add a handful of spinach or kale for an extra nutrient boost.",
+                "Include a scoop of protein powder for additional protein.",
+                "For a thicker smoothie, use frozen banana slices instead of fresh."
+            ],
+            tips: [
+                "To make it vegan, use plant-based yogurt and milk alternatives.",
+                "For added texture, sprinkle with granola or chia seeds before serving."
+            ]
+        },
+        {
+            id: 5,
+            name: "Peanut Butter and Jelly Sandwich",
+            image: "src/assets/pbj-s.jpeg",
+            introduction: "A timeless favorite, the peanut butter and jelly sandwich is simple yet satisfying.",
+            ingredients: [
+                "2 slices bread (white, wheat, or your choice)",
+                "2 tablespoons peanut butter",
+                "1-2 tablespoons jelly or jam (grape, strawberry, raspberry, etc.)"
+            ],
+            instructions: [
+                "Spread peanut butter evenly on one slice of bread.",
+                "Spread jelly or jam evenly on the other slice of bread.",
+                "Place the two slices of bread together, peanut butter and jelly sides facing each other.",
+                "If desired, use a knife to cut the sandwich diagonally for a classic presentation.",
+                "Serve immediately, or pack in a lunchbox for later enjoyment."
+            ],
+            nutritionalInfo: {
+                calories: 350,
+                fat: 18,
+                protein: 10,
+                carbohydrates: 40
+            },
+            variations: [
+                "Use almond butter or cashew butter instead of peanut butter for a different flavor.",
+                "Try different types of bread, such as whole grain, multigrain, or gluten-free.",
+                "Add sliced bananas, apples, or strawberries for extra flavor and texture."
+            ],
+            tips: [
+                "To prevent the bread from becoming soggy, consider spreading a thin layer of peanut butter on both slices of bread before adding the jelly or jam.",
+                "For a fun twist, use cookie cutters to shape the sandwiches into fun shapes for kids."
+            ]
+        }
+    ],
+    images: [product1, product2, product3, product4, product5],
     inputs: {},
     cartItems: [],
     profiles: false
 };
 
-const recipes = [
-    {
-        id: 1,
-        name: "Peanut Butter Cookies",
-        image: "src/assets/cookies.jpg",
-        introduction: "These classic peanut butter cookies are a crowd favorite and perfect for any occasion.",
-        ingredients: [
-            "1 cup peanut butter",
-            "1 cup granulated sugar",
-            "1 egg",
-            "1 teaspoon vanilla extract",
-            "1/2 teaspoon baking soda",
-            "Pinch of salt"
-        ],
-        instructions: [
-            "Preheat the oven to 350°F (175°C) and line a baking sheet with parchment paper.",
-            "In a mixing bowl, cream together the peanut butter and sugar until smooth.",
-            "Add the egg, vanilla extract, baking soda, and salt, and mix until well combined.",
-            "Roll the dough into small balls and place them on the prepared baking sheet.",
-            "Use a fork to gently flatten each ball, creating a crisscross pattern.",
-            "Bake for 10-12 minutes, or until the edges are lightly golden.",
-            "Allow the cookies to cool on the baking sheet for a few minutes before transferring them to a wire rack to cool completely."
-        ],
-        nutritionalInfo: {
-            calories: 120,
-            fat: 8,
-            protein: 4,
-            carbohydrates: 10
-        },
-        variations: [
-            "Add chocolate chips for a twist.",
-            "Substitute almond butter for peanut butter for a different flavor profile.",
-            "Use coconut sugar or honey instead of granulated sugar for a healthier option."
-        ],
-        tips: [
-            "For extra chewy cookies, slightly under-bake them and allow them to cool on the baking sheet.",
-            "Store leftovers in an airtight container at room temperature for up to one week."
-        ]
-    },
-    {
-        id: 2,
-        name: "Peanut Butter Smoothie",
-        image: "src/assets/smoothie.jpg",
-        introduction: "This creamy peanut butter smoothie is a delicious and nutritious way to start your day.",
-        ingredients: [
-            "1 banana, frozen",
-            "1/4 cup peanut butter",
-            "1 cup almond milk",
-            "1 tablespoon honey",
-            "1/2 teaspoon cinnamon",
-            "Handful of ice cubes"
-        ],
-        instructions: [
-            "Combine all ingredients in a blender.",
-            "Blend until smooth and creamy.",
-            "Pour into glasses and serve immediately."
-        ],
-        nutritionalInfo: {
-            calories: 280,
-            fat: 15,
-            protein: 7,
-            carbohydrates: 30
-        },
-        variations: [
-            "Add a handful of spinach for extra nutrition.",
-            "Use Greek yogurt for added creaminess and protein.",
-            "Top with a sprinkle of crushed peanuts for texture."
-        ],
-        tips: [
-            "Adjust the sweetness by adding more or less honey, according to your taste preference.",
-            "Feel free to customize with your favorite fruits or add-ins."
-        ]
-    },
-    {
-        id: 3,
-        name: "Peanut Butter Energy Balls",
-        image: "src/assets/energy_balls.jpg",
-        introduction: "These peanut butter energy balls are perfect for a quick and healthy snack on the go.",
-        ingredients: [
-            "1 cup rolled oats",
-            "1/2 cup peanut butter",
-            "1/4 cup honey",
-            "1/4 cup mini chocolate chips",
-            "1/4 cup chopped peanuts",
-            "1 teaspoon vanilla extract"
-        ],
-        instructions: [
-            "In a mixing bowl, combine all ingredients until well mixed.",
-            "Roll the mixture into small balls, about 1 inch in diameter.",
-            "Place the balls on a baking sheet lined with parchment paper.",
-            "Chill in the refrigerator for at least 30 minutes to firm up.",
-            "Store in an airtight container in the refrigerator for up to one week."
-        ],
-        nutritionalInfo: {
-            calories: 120,
-            fat: 6,
-            protein: 3,
-            carbohydrates: 15
-        },
-        variations: [
-            "Swap out the chocolate chips for dried fruit for a different flavor.",
-            "Add a scoop of protein powder for extra protein.",
-            "Coat the balls in shredded coconut or cocoa powder for added texture."
-        ],
-        tips: [
-            "Feel free to customize with your favorite mix-ins, such as chia seeds, flaxseed, or shredded coconut.",
-            "These energy balls are great for pre or post-workout snacks."
-        ]
-    }
-];
 
 
 const reducer = (state, action) => {
@@ -174,6 +285,10 @@ const reducer = (state, action) => {
             return { ...state, products: action.payload };
         case 'newInputs':
             return { ...state, inputs: action.payload };
+        case 'images':
+            return { ...state, images: action.payload };
+        case 'recipes':
+            return { ...state, recipes: action.payload };
         case 'addcart':
             const { productId } = action.payload;
             const productToAdd = state.products.find(item => item.id === productId);
@@ -238,6 +353,7 @@ export const DataProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const { width } = useWindowSize();
 
+
     useEffect(() => {
         // Retrieve cart items from localStorage
         const storedCartItems = localStorage.getItem('cartItems');
@@ -300,7 +416,6 @@ export const DataProvider = ({ children }) => {
                 handleRemove,
                 calculateTotalPrice,
                 width,
-                recipes,
                 EventBus
             }}
         >

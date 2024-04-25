@@ -28,7 +28,7 @@ const Header = () => {
         <div>
             <header className='bg-white-300 w-[100%] flex justify-between px-2 py-6  opacity-70 shadow-xl h-[85px]'>
 
-                {width < 615 ?
+                {width < 660 ?
                     <div>
 
                         <RxHamburgerMenu
@@ -45,7 +45,7 @@ const Header = () => {
                         <h1
                             id="logo"
                             className='text-3xl font-light text-yellow-400 mr-8 py-3 ml-3'
-                        >Fralon™ </h1>
+                        >Fralon</h1>
                         <nav className='flex justify-around flex-row w-[100%] font-serif text-xl'>
                             <Link to="/"
 
@@ -81,12 +81,12 @@ const Header = () => {
                 <div
                     id={`sidebar ${sidebar ? 'open' : ''}`}
 
-                    className={`fixed top-0 h-[60%] w-full bg-gray-200 z-50 overflow-hidden transition-transform duration-500 ease-in-out transform ${sidebar ? 'translate-x-0' : '-translate-x-full'}`}>
+                    className={`fixed flex justify-between flex-col top-0 h-[70%] w-full bg-gray-200 z-50 overflow-hidden transition-transform duration-500 ease-in-out transform ${sidebar ? 'translate-x-0' : '-translate-x-full'}`}>
 
-                    <div className='top-[10px] py-9 px-5  flex justify-between flex-row items-center'>
+                    <div className='top-[10px] py-7 px-5  flex justify-between flex-row items-center'>
                         <span
                             id="logo"
-                            className='text-yellow-500 text-3xl font-bold p-2'>Fralon Peanuts™ </span>
+                            className='text-yellow-500 text-3xl font-bold p-2'>Fralon Peanuts</span>
 
                         <IoChevronBack
                             onClick={closeSidebar}
@@ -108,7 +108,11 @@ const Header = () => {
                             className='block text-blue-900 font-bold w-100% px-2 text-center py-3  hover:bg-yellow-400 '>Contacts</Link>
 
                     </div>
-
+                    <div className='flex justify-center gap-x-3 text-blue-600 flex-row p-4'>
+                        <Link>Home |</Link>
+                        <Link>Products |</Link>
+                        <Link>About us |</Link>
+                    </div>
                 </div>
 
             )

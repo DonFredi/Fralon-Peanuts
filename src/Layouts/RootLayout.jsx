@@ -1,11 +1,9 @@
 import { Link, Outlet } from 'react-router-dom';
-import { useContext } from 'react';
-import DataContext from '../pages/DataContext';
 
 import Header from '../pages/Header';
 
 const RootLayout = () => {
-    const { state } = useContext(DataContext);
+
 
 
     const currentDate = new Date();

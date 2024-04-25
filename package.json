@@ -2,7 +2,7 @@
   "name": "fralon",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://DonFredi.github.io/fralon_peanuts_gh",
+  "homepage": "https://DonFredi.github.io/fralon-peanuts",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
