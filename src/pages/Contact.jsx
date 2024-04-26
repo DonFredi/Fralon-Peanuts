@@ -100,7 +100,7 @@ const Contact = () => {
             </section>
 
             <section className=" p-3 flex flex-col w-[100%]">
-                <img src="src/assets/place.svg" alt="maps"
+                <img src="src/assets/map.jpeg" alt="maps"
                     className="h-[500px]"
                 />
             </section>
@@ -114,7 +114,7 @@ const Contact = () => {
                 <div className="flex flex-wrap justify-between p-4">
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
                         <div className="bg-white rounded-lg p-4 text-center">
-                            <img src="src/assets/client1.jpg" alt="clients" className="w-full mb-2 rounded-md" />
+                            <img src="src/assets/client1.jpg" alt="clients" className="w-full mb-2 rounded-md h-fit" />
                             <p>Jane Doe</p>
                             <p>CEO & Founder</p>
                             <p>John is the visionary leader behind Fralon Peanuts, driving innovation and growth.</p>
