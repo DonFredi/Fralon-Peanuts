@@ -131,7 +131,7 @@ const Contact = () => {
 
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 text-center">
                         <div className="bg-white rounded-lg p-4 text-center">
-                            <img src="src/assets/client2.jpg" alt="clients" className="w-full mb-2 rounded-md" />
+                            <img src="src/assets/client1.jpg" alt="clients" className="w-full mb-2 rounded-md" />
                             <p>Brenda</p>
                             <p>Co Founder</p>
                             <p>Jane is passionate about technology and leads our technical team with precision.</p>
@@ -148,7 +148,7 @@ const Contact = () => {
 
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
                         <div className="bg-white rounded-lg p-4 text-center">
-                            <img src="src/assets/client3.jpg" alt="clients" className="w-full mb-2 rounded-md" />
+                            <img src="src/assets/client1.jpg" alt="clients" className="w-full mb-2 rounded-md" />
                             <p>Michael Smith</p>
                             <p>Marketing Director</p>
                             <p>Michael is dedicated to creating impactful marketing campaigns that resonate with clients.</p>

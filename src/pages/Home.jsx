@@ -11,9 +11,9 @@ const About = () => {
             <div className='w-[100%] p-3 flex justify-start flex-row mb-9 gap-x-2'>
 
 
-                <div className=" flex justify-start flex-col items-start  md:flex-row">
+                <div className=" flex justify-start flex-row  items-center py-3  md:flex-col">
 
-                    <h2 className='   text-4xl text-yellow-400 font-bold font-serif text-center mb-3'>Delicious Peanuts for every Occassion</h2>
+                    <h2 className='   text-4xl text-yellow-400 font-bold font-serif text-center mb-8'>Delicious Peanuts for every Occassion</h2>
                     <div className="flex justify-center flex-col px-8 md:justify-start">
                         <p className=" mb-6 text-center">Our peanuts are carefully selected, roasted to perfection, and packed with `nutrients.Whether you're looking for a healthy snack or versatile ingredient, Fralon Peanuts has you covered.</p>
 
