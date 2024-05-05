@@ -28,13 +28,13 @@ const Header = () => {
         <div>
             <header className='bg-white-300 w-[100%] flex justify-between px-2 py-6  opacity-70 shadow-xl h-[85px]'>
 
-                {width < 660 ?
+                {width < 760 ?
                     <div>
 
                         <RxHamburgerMenu
 
                             onClick={handleHamBtn}
-                            className='bg-transparent text-black right-0 top-6 w-[45px] h-[45px] hover:bg-slate-300 p-2'
+                            className='bg-transparent text-black right-0 top-6 w-[48px] h-[48px] hover:bg-slate-300 px-2'
                         />
 
 
@@ -49,10 +49,10 @@ const Header = () => {
                         <nav className='flex justify-around flex-row w-[100%] font-serif text-xl'>
                             <Link to="/"
 
-                                className='flex-1 text-blue-900 font-sans font-semibold  w-100% px-3 py-2 border-b-4 border-transparent hover:border-yellow-500 hover:text-yellow-500 '>Home</Link>
-                            <Link to="products" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 py-2  border-b-4 border-transparent hover:border-yellow-500  hover:text-yellow-500 '>Products</Link>
-                            <Link to="recipes" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 py-2 border-b-4 border-transparent hover:border-yellow-500 hover:text-yellow-500 '>Recipes</Link>
-                            <Link to="contact" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 py-2  border-b-4 border-transparent hover:border-yellow-500 hover:text-yellow-500 '>Contacts</Link>
+                                className='flex-1 text-blue-900 font-sans font-semibold  w-100% px-3 border-b-4 border-transparent hover:border-yellow-500 hover:text-yellow-500 '>Home</Link>
+                            <Link to="products" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 border-b-4 border-transparent hover:border-yellow-500  hover:text-yellow-500 '>Products</Link>
+                            <Link to="recipes" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 border-b-4 border-transparent hover:border-yellow-500 hover:text-yellow-500 '>Recipes</Link>
+                            <Link to="contact" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 border-b-4 border-transparent hover:border-yellow-500 hover:text-yellow-500 '>Contacts</Link>
 
                         </nav>
 

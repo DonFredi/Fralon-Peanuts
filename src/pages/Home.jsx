@@ -6,7 +6,7 @@ import ImageSlider from "./ImageSlider";
 const About = () => {
 
     return (
-        <div className="px-2">
+        <div className="px-3">
 
             <div className='w-[100%] p-3 flex justify-start flex-row mb-9 gap-x-2'>
 
@@ -14,7 +14,7 @@ const About = () => {
                 <div className=" flex justify-start flex-row  items-center py-3  md:flex-col">
 
                     <h2 className='   text-4xl text-yellow-400 font-bold font-serif text-center mb-8'>Delicious Peanuts for every Occassion</h2>
-                    <div className="flex justify-center flex-col px-8 md:justify-start">
+                    <div className="flex justify-center items-center flex-col px-8 md:justify-start">
                         <p className=" mb-6 text-center">Our peanuts are carefully selected, roasted to perfection, and packed with `nutrients.Whether you're looking for a healthy snack or versatile ingredient, Fralon Peanuts has you covered.</p>
 
                         <div className="flex flex-row gap-x-6 justify-center">
@@ -56,7 +56,7 @@ const About = () => {
                 </div>
             </article>
 
-            <section className="flex justify-around flex-row flex-wrap mt-[80px] md:flex-col mb-4 gap-x-3">
+            <section className="flex justify-around flex-row flex-wrap mt-[80px] md:flex-col mb-4 gap-x-3 px-2">
                 <div className="flex justify-center flex-col gap-y-6 mb-6">
                     <h3 className="text-2xl font-bold text-yellow-400">Delicious and Nutritious Peanut Products</h3>
                     <p>Discover the natural ingredients, health benefits, and local sourcing behind our premium peanut products.</p>
@@ -88,7 +88,7 @@ const About = () => {
                 </div>
 
 
-                <div className="w-[50%]">
+                <div className="w-[50%] px-2">
                     <h3 className="font-bold text-2xl mb-8 text-yellow-400 mt-[80px]">Discover the Health Benefits of Fralon Peanuts' Nutritious Products</h3>
                     <p>At Fralon Peanuts, we offer a range of delicious and nutritious peanut products that provide numerous health benefits. Our peanuts are packed with essential nutrients, making them a great addition to a balanced diet.</p>
 

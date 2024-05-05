@@ -131,7 +131,7 @@ const Products = () => {
                     </div>
 
                 </div>
-                <img src="src/assets/place.svg" alt="place holder"
+                <img src="src/assets/place.jpeg" alt="place holder"
                     className='w-[60%] px-6'
                 />
             </section>
