@@ -16,7 +16,9 @@ const Contact = () => {
 
 
     return (
-        <div className='flex flex-col justify-center'>
+        <div
+            id="contact"
+            className='flex flex-col justify-center'>
             <h2 className="text-center text-3xl text-yellow-400 font-bold p-6">Get in touch with Fralon</h2>
             <section className="p-3 mb-9 ml-4">
                 <p className="text-left">Delicious</p>

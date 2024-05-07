@@ -71,7 +71,7 @@ const Form = () => {
                         type="text"
                         name="message"
                         {...register("message", {
-                            required: "Message is required",
+                            required: "Input your Message",
                         })}
                         placeholder='Your message...'
                         rows="4"
