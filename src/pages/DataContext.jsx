@@ -4,6 +4,15 @@ import product2 from '../assets/butter.jpg';
 import product3 from '../assets/roasted.jpg';
 import product4 from '../assets/peanut.jpg';
 import product5 from '../assets/collection.jpg';
+import Cookies from '../assets/cookies.jpg';
+import Smoothie from '../assets/smoothie.jpg';
+import Energyballs from '../assets/energy_balls.jpg';
+import Noodles from '../assets/peanut_noodles.jpeg';
+import Smoothies from '../assets/peanut_butter_smoothie.jpeg';
+import Jelly from '../assets/pbj-s.jpeg';
+
+
+
 import useWindowSize from '../components/useWindowSize';
 
 const DataContext = createContext({});
@@ -56,7 +65,7 @@ const initialState = {
         {
             id: 0,
             name: "Peanut Butter Cookies",
-            image: "src/assets/cookies.jpg",
+            image: Cookies,
             introduction: "These classic peanut butter cookies are a crowd favorite and perfect for any occasion.",
             ingredients: [
                 "1 cup peanut butter",
@@ -94,7 +103,7 @@ const initialState = {
         {
             id: 1,
             name: "Peanut Butter Smoothie",
-            image: "src/assets/smoothie.jpg",
+            image: Smoothie,
             introduction: "This creamy peanut butter smoothie is a delicious and nutritious way to start your day.",
             ingredients: [
                 "1 banana, frozen",
@@ -128,7 +137,7 @@ const initialState = {
         {
             id: 2,
             name: "Peanut Butter Energy Balls",
-            image: "src/assets/energy_balls.jpg",
+            image: Energyballs,
             introduction: "These peanut butter energy balls are perfect for a quick and healthy snack on the go.",
             ingredients: [
                 "1 cup rolled oats",
@@ -164,7 +173,7 @@ const initialState = {
         {
             id: 3,
             name: "Thai Peanut Noodles",
-            image: "src/assets/peanut_noodles.jpeg",
+            image: Noodles,
             introduction: "These Thai-inspired peanut noodles are packed with flavor and make for a satisfying meal.",
             ingredients: [
                 "8 oz (225g) rice noodles",
@@ -205,7 +214,7 @@ const initialState = {
         {
             id: 4,
             name: "Peanut Butter Banana Smoothie",
-            image: "src/assets/peanut_butter_smoothie.jpeg",
+            image: Smoothies,
             introduction: "This creamy and nutritious smoothie is a perfect way to start your day or refuel after a workout.",
             ingredients: [
                 "1 ripe banana",
@@ -240,7 +249,7 @@ const initialState = {
         {
             id: 5,
             name: "Peanut Butter and Jelly Sandwich",
-            image: "src/assets/pbj-s.jpeg",
+            image: Jelly,
             introduction: "A timeless favorite, the peanut butter and jelly sandwich is simple yet satisfying.",
             ingredients: [
                 "2 slices bread (white, wheat, or your choice)",

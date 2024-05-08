@@ -10,6 +10,9 @@ import { FiPhone } from "react-icons/fi";
 import { CiLocationOn } from "react-icons/ci"
 import { Link } from 'react-router-dom';
 
+import Customer from '../assets/agent.jpg';
+import Map from '../assets/map.jpeg';
+import Client1 from '../assets/client1.jpg';
 
 
 const Contact = () => {
@@ -50,7 +53,7 @@ const Contact = () => {
                         <p>Get Directions </p>
                     </div>
                     <div className="mt-6 flex items-center">
-                        <img src="src/assets/agent.jpg" alt="customer service agents"
+                        <img src={Customer} alt="customer service agents"
 
                         />
                     </div>
@@ -102,7 +105,7 @@ const Contact = () => {
             </section>
 
             <section className=" p-3 flex flex-col w-[100%]">
-                <img src="src/assets/map.jpeg" alt="maps"
+                <img src={Map} alt="maps"
                     className="h-[500px]"
                 />
             </section>
@@ -116,7 +119,7 @@ const Contact = () => {
                 <div className="flex flex-wrap justify-between p-4">
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
                         <div className="bg-white rounded-lg p-4 text-center">
-                            <img src="src/assets/client1.jpg" alt="clients" className="w-full mb-2 rounded-md h-fit" />
+                            <img src={Client1} alt="clients" className="w-full mb-2 rounded-md h-fit" />
                             <p>Jane Doe</p>
                             <p>CEO & Founder</p>
                             <p>John is the visionary leader behind Fralon Peanuts, driving innovation and growth.</p>
@@ -133,7 +136,7 @@ const Contact = () => {
 
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 text-center">
                         <div className="bg-white rounded-lg p-4 text-center">
-                            <img src="src/assets/client1.jpg" alt="clients" className="w-full mb-2 rounded-md" />
+                            <img src={Client1} alt="clients" className="w-full mb-2 rounded-md" />
                             <p>Brenda</p>
                             <p>Co Founder</p>
                             <p>Jane is passionate about technology and leads our technical team with precision.</p>
@@ -150,7 +153,7 @@ const Contact = () => {
 
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
                         <div className="bg-white rounded-lg p-4 text-center">
-                            <img src="src/assets/client1.jpg" alt="clients" className="w-full mb-2 rounded-md" />
+                            <img src={Client1} alt="clients" className="w-full mb-2 rounded-md" />
                             <p>Michael Smith</p>
                             <p>Marketing Director</p>
                             <p>Michael is dedicated to creating impactful marketing campaigns that resonate with clients.</p>
@@ -167,7 +170,7 @@ const Contact = () => {
 
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 text-center">
                         <div className="bg-white rounded-lg p-4 text-center">
-                            <img src="src/assets/client1.jpg" alt="clients" className="w-full mb-2 rounded-md" />
+                            <img src={Client1} alt="clients" className="w-full mb-2 rounded-md" />
                             <p>Emily Johnson</p>
                             <p>Design Lead</p>
                             <p>Emily brings creativity and innovation to every design project, ensuring our brand stands out.</p>

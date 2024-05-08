@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom"
 import { FaStar } from "react-icons/fa6";
 import ImageSlider from "./ImageSlider";
+import Board from '../assets/pbonboard.jpg';
+import Roast from '../assets/roast.jpg';
+import Client2 from '../assets/client2.jpg';
+import Spoon from '../assets/pbspoon.jpg';
 
 
 const About = () => {
@@ -51,7 +55,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="flex justify-center items-center h-fit px-3">
-                    <img src="src/assets/pbonboard.jpg" alt="pbon board" className="h-full"
+                    <img src={Board} alt="pbon board" className="h-full"
                     />
                 </div>
             </article>
@@ -83,7 +87,7 @@ const About = () => {
                 id="section"
                 className="flex justify-evenly flex-row gap-x-3 mt-[100px] border-t-2 py-9 ">
                 <div className="w-[50%] py-5 flex justify-center flex-col p-3">
-                    <img src="src/assets/roast.jpg" alt="roasted"
+                    <img src={Roast} alt="roasted"
                     />
                 </div>
 
@@ -109,7 +113,7 @@ const About = () => {
                 id="testimonials"
                 className="py-6 mt-[130px] flex justify-start flex-col gap-x-6 border-t-2 md:flex-row p-8">
                 <div className="h-[50%] w-full">
-                    <img src="src/assets/client2.jpg" alt="placeholder"
+                    <img src={Client2} alt="placeholder"
                         className="md:w-[50%]"
                     />
                 </div>
@@ -145,7 +149,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className=" flex justify-center p-3 mt-8 md:w-[50%] w-[100%]">
-                    <img src="src/assets/pbspoon.jpg" alt="pbon spoon"
+                    <img src={Spoon} alt="pbon spoon"
                     />
                 </div>
             </section>

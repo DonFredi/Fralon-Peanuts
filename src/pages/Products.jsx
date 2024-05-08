@@ -2,6 +2,10 @@ import React, { useContext } from 'react';
 import { FaStar } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import DataContext from './DataContext';
+import Collection from "../assets/collection.jpg";
+import Place from "../assets/place.jpeg"
+import Client1 from "../assets/client1.jpg"
+import Roast from "../assets/roast.jpg"
 
 const Products = () => {
     const { state, handleCart } = useContext(DataContext);
@@ -13,7 +17,7 @@ const Products = () => {
             <article className='flex flex-col items-center justify-start md:flex-row'>
                 <div className='w-[50%] md:w-1/2 flex justify-start items-center flex-col'>
 
-                    <img className='w-fit h-[500px]' src="src/assets/collection.jpg" alt="peanuts collection" />
+                    <img className='w-fit h-[500px]' src={Collection} alt="peanuts collection" />
 
                 </div>
 
@@ -131,7 +135,7 @@ const Products = () => {
                     </div>
 
                 </div>
-                <img src="src/assets/place.jpeg" alt="place holder"
+                <img src={Place} alt="place holder"
                     className='w-[60%] px-6'
                 />
             </section>
@@ -145,7 +149,7 @@ const Products = () => {
                 </div>
                 <p>The Fralon peanuts are absolutely delicious! I can't get enough of them.</p>
                 <div className='flex justify-start flex-row gap-x-3 items-center'>
-                    <img src="src/assets/client1.jpg" alt="place holder"
+                    <img src={Client1} alt="place holder"
                         className='w-[48px] h-[48px] rounded-full'
                     />
                     <p>John Doe |</p>
@@ -153,10 +157,9 @@ const Products = () => {
                 </div>
 
             </article>
-            <section className=" hover:opacity-80 bg-cover bg-center mt-[100px]" style={{
-                backgroundImage: 'url("src/assets/roast.jpg")',
-            }
-            }>
+            <section className="hover:opacity-80 bg-cover bg-center mt-[100px]" style={{
+                backgroundImage: `url(${Roast})` // Corrected the syntax here
+            }}>
                 <div className="bg-black bg-opacity-50 p-9 text-white text-center">
                     <h3 className="text-3xl font-bold mb-4">Discover Our Delicious Peanut Products</h3>
                     <p className="text-lg mb-6">Indulge in the Irresistible Taste of Fralon Peanut Butter</p>
@@ -176,5 +179,6 @@ const Products = () => {
 };
 
 export default Products;
+
 
 
