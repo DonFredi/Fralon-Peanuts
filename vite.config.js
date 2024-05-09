@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/fralon-peanuts/',
+  base: '/fralon-peanuts',
   build: {
     outDir: 'build', // Specify the output directory as 'build'
   },
