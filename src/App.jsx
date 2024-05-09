@@ -27,31 +27,12 @@ function App() {
       <Route path="/" element={<RootLayout />}>
 
         <Route index element={<Home />} />
-        <Route
-          path="products"
-          /* errorElement={<NotFound />}*/
-          element={
-            <Products
-            />} >
-
-          <Route
-            /* path="/products/:id"*/
-            element={<Image />}
-
-          />
+        <Route path="products" element={<Products />} >
+          <Route element={<Image />} />
         </Route>
-        <Route path="recipes" element={
-          <Recipes
-          />}
-
-
-        />
-        <Route
-          path="cart"
-          element={<Cart />}
-        />
+        <Route path="recipes" element={<Recipes />} />
+        <Route path="cart" element={<Cart />} />
         <Route path="contact" element={<Contact />} />
-
         <Route path="*" element={<NotFound />} />
       </Route>
     )
