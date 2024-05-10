@@ -33,7 +33,7 @@ function App() {
         <Route path="recipes" element={<Recipes />} />
         <Route path="cart" element={<Cart />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="404" element={<NotFound />} />
+        <Route path="notfound" element={<NotFound />} />
       </Route>
     )
   )
