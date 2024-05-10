@@ -24,8 +24,8 @@ const Contact = () => {
             className='flex flex-col justify-center'>
             <h2 className="text-center text-3xl text-yellow-400 font-bold p-6">Get in touch with Fralon</h2>
             <section className="p-3 mb-9 ml-4">
-                <p className="text-left">Delicious</p>
-                <h2 className="text-3xl font-bold text-yellow-400 text-left my-2">Contact Information</h2>
+                <p className="text-center">Delicious</p>
+                <h2 className="text-3xl font-bold text-yellow-400 text-center my-2">Contact Information</h2>
                 <p className="text-left">We'd love to hear from you. Reach out to us using any of the methods below.</p>
 
                 <div className="flex justify-between flex-col p-4 md:flex-row mt-8 items-center">
@@ -64,20 +64,20 @@ const Contact = () => {
             </section>
 
 
-            <p className="ml-6">Fresh</p>
-            <h2 className='text-3xl text-yellow-400 font-bold font-sans ml-5 my-2'>Get in touch</h2>
+            <p className="ml-6 text-center">Fresh</p>
+            <h2 className='text-3xl text-yellow-400 font-bold font-sans ml-5 my-2 text-center'>Get in touch</h2>
             <section className='text-center font-sans p-4 mb-8'>
-                <p className="text-left mb-3 ml-1">Have a question or need assistance? We're here to help!</p>
+                <p className="text-center mb-3 ml-1">Have a question or need assistance? We're here to help!</p>
                 < Form />
 
 
             </section>
 
-            <section className='flex  justify-evenly  flex-row gap-x-9'>
-                <div className="flex justify-start flex-col p-3">
-                    <p className="text-left ml-3">Delicious</p>
-                    <h2 className='text-left text-yellow-400 font-bold text-3xl p-2 my-2'>Get in touch</h2>
-                    <p className="ml-3">Find our location near you and discover our delicious peanut products.</p>
+            <section className='flex  justify-evenly  gap-x-9 flex-col items-center'>
+                <div className="flex justify-start p-3 flex-col">
+                    <p className="text-center ">Delicious</p>
+                    <h2 className='text-center text-yellow-400 font-bold text-3xl p-2 my-2 '>Get in touch</h2>
+                    <p className="text-center">Find our location near you and discover our delicious peanut products.</p>
                 </div>
                 <div className="p-10 mr-8">
                     <Link className=' mb-5 text-lg text-center flex flex-row justify-start items-center hover:text-yellow-500 gap-2 ' to='www.facebook.com'>

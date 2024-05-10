@@ -67,10 +67,10 @@ const Products = () => {
             </article>
 
             <section className='mt-[100px] p-5'>
-                <h3 className='ml-1'>Delicious</h3>
-                <h2 className='text-3xl text-yellow-400 font-bold font-serif text-left mb-2'>Products</h2>
+                <h3 className='text-center'>Delicious</h3>
+                <h2 className='text-3xl text-yellow-400 font-bold font-serif text-center mb-2'>Products</h2>
 
-                <p>Discover our wide range of peanut products, including raw peanuts, roasted peanuts, and peanut butter.</p>
+                <p className='text-center'>Discover our wide range of peanut products, including raw peanuts, roasted peanuts, and peanut butter.</p>
 
                 <div className=' w-[100%] flex justify-around items-center flex-row gap-x-4 mt-9 flex-wrap'>
 
@@ -91,12 +91,12 @@ const Products = () => {
                 </div>
 
             </section>
-            <section className='mt-[100px] flex justify-start items-center flex-col md:flex-row gap-x-5 p-6'>
-                <div className='w-[40%]'>
-                    <h3 className='ml-1'>Nutritious</h3>
-                    <h2 className='text-3xl font-bold text-yellow-400 mb-4'>Discover the Nutritional Benefits of Peanuts</h2>
+            <section className='mt-[100px] flex justify-start items-center flex-col gap-x-5 p-6'>
+                <div className='text-center'>
+                    <h3 className='text-center'>Nutritious</h3>
+                    <h2 className='text-3xl font-bold text-yellow-400 mb-4 text-center'>Discover the Nutritional Benefits of Peanuts</h2>
                     <p>Peanuts and peanut products are packed with essential nutrients and offer numerous health benefits. They are a great source of protein, fiber, healthy fats, and vitamins, making them a nutritious addition to your diet.</p>
-                    <div className='mt-3 flex flex-row justify-start'>
+                    <div className='mt-3 flex flex-row justify-center'>
                         <Link className="p-2 bg-slate-100 border-black border-2 hover:bg-slate-200">Learn More</Link>
                         <Link
                             to="/cart"
@@ -105,7 +105,7 @@ const Products = () => {
 
                 </div>
 
-                <div className='w-[60%] flex justify-start gap-x-4 flex-row mt-6 p-3'>
+                <div className='flex justify-start gap-x-4 flex-row mt-6 p-3'>
                     <div className='w-[50%] flex flex-col justify-center bg-slate-100 border-black border-2 p-2'>
                         <h3 className='text-xl font-semibold'>Quality Proteins</h3>
                         <p className='text-2xl font-bold'>50%</p>

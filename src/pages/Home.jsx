@@ -60,8 +60,8 @@ const About = () => {
                 </div>
             </article>
 
-            <section className="flex justify-around flex-row flex-wrap mt-[80px] md:flex-col mb-4 gap-x-3 px-2">
-                <div className="flex justify-center flex-col gap-y-6 mb-6">
+            <section className="flex justify-around flex-wrap mt-[80px] flex-col mb-4 gap-x-3 px-2">
+                <div className="flex justify-center flex-col items-center gap-y-6 mb-6">
                     <h3 className="text-2xl font-bold text-yellow-400">Delicious and Nutritious Peanut Products</h3>
                     <p>Discover the natural ingredients, health benefits, and local sourcing behind our premium peanut products.</p>
                     <div className="flex items-center gap-x-4">
@@ -72,7 +72,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="flex justify-center flex-col gap-y-6">
+                <div className="flex justify-center flex-col gap-y-6 items-center">
                     <h3 className="text-2xl font-bold text-yellow-400">Support Local Farmers and Enjoy Freshness</h3>
                     <p>By choosing Fralon Peanuts, you're supporting local farmers and ensuring the freshest peanuts in every jar.</p>
                     <div className="flex items-center gap-x-4">
