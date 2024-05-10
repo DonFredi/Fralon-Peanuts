@@ -16,6 +16,7 @@ import Recipes from './pages/Recipes'
 import Contact from './pages/Contact';
 import Products from './pages/Products';
 import Cart from './pages/Cart';
+import NotFound from './pages/NotFound';
 import { DataProvider } from './pages/DataContext';
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
         <Route path="recipes" element={<Recipes />} />
         <Route path="cart" element={<Cart />} />
         <Route path="contact" element={<Contact />} />
-
+        <Route path="404" element={<NotFound />} />
       </Route>
     )
   )
