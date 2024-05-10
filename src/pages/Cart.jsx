@@ -14,25 +14,26 @@ const Cart = () => {
         <div
             id="cart-container"
             className='flex justify-start flex-col md:flex-row gap-2 items-center'>
+
             <ul
                 id="cart-ul"
                 className="flex justify-start p-3 flex-col items-center md:w-[65%] w-[100%]">
                 {state.products.map(item => (
-                    <li key={item.id} className="flex justify-around flex-row w-[100%] bg-slate-100 gap-4 p-3 rounded-xl mt-4 hover:bg-slate-200">
+                    <li key={item.id} className="flex justify-around flex-row w-[100%] bg-slate-100 gap-4 p-2 rounded-xl mt-4 hover:bg-slate-200">
                         <img src={item.src} alt={item.title.item} style={{ width: '100px', height: '100px' }} />
                         <div>
-                            <p className='text-lg font-bold'>{item.title.item}</p>
+                            <p className='text-sm font-bold my-2'>{item.title.item}</p>
                             <p className='text-l font-semibold'>Weight: {item.title.weight}</p>
                             <p className='text-l font-semibold'>Price: {item.title.price} Kshs</p>
                         </div>
                         <div className="flex justify-between flex-row mt-10 gap-4">
-                            <div className="flex justify-center gap-3 p-2 bg-yellow-400 h-[38px] sm:h-[48px] rounded-lg font-semibold items-center cursor-pointer hover:bg-yellow-300"
+                            <div className="flex justify-start gap-3 py-4 px-2 bg-yellow-400 h-[44px] sm:h-[48px] rounded-lg font-semibold items-center cursor-pointer hover:bg-yellow-300"
                                 onClick={() => handleCart(item.id)}
                             >
                                 <IoIosAdd
 
                                     className="w-[25px] text-white font-bold bg-blue-400 h-[25px] rounded-full"
-                                />Add Cart
+                                /><p className="py-2">Add Cart</p>
                             </div>
 
                         </div>
@@ -52,12 +53,12 @@ const Cart = () => {
                 <ol className='w-[100%] flex justify-start flex-col mb-5 px-4'>
                     {state.cartItems && state.cartItems.length > 0 ? (
                         state.cartItems.map(item => (
-                            <li key={item.id} className='flex-1 w-[100%] flex justify-start mt-3 flex-row items-center text-center mb-2 px-9 gap-x-20'>
+                            <li key={item.id} className='w-[100%] flex justify-start mt-3 flex-row items-center text-center mb-2 px-9 gap-x-20'>
                                 <img src={item.src} alt={item.title?.item} className='w-[50px] h-[50px] rounded-lg' />
                                 <p className='font-semibold'>{item.title?.price}/=</p>
                                 <p className='font-semibold'>{item.quantity}</p>
 
-                                <button className="p-2  bg-blue-600 rounded-lg text-white hover:bg-blue-500" onClick={() => handleRemove(item.id)}>Remove</button>
+                                <button className="p-2  bg-blue-600 rounded-lg text-white hover:bg-blue-500" onClick={() => handleRemove(item.id)}>x</button>
 
 
                             </li>

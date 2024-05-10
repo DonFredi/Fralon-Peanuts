@@ -57,8 +57,8 @@ const RootLayout = () => {
                 <hr
                     className='my-2 '
                 />
-                <div className='flex justify-center flex-row px-2'>
-                    <p className='font-bold text-blue-800'>@{currentYear} Fralon Peanuts. All rights reserved.</p>
+                <div className='flex justify-center flex-row px-2 py-1'>
+                    <p className='font-bold text-blue-800'>Copyright @ {currentYear} Fralon Peanuts. All rights reserved.</p>
 
                 </div>
             </footer>

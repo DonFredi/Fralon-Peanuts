@@ -54,8 +54,8 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center items-center h-fit px-3">
-                    <img src={Board} alt="pbon board" className="h-full"
+                <div className="flex justify-center items-center">
+                    <img src={Board} alt="pbon board"
                     />
                 </div>
             </article>
@@ -86,14 +86,15 @@ const About = () => {
             <section
                 id="section"
                 className="flex justify-evenly flex-row gap-x-3 mt-[100px] border-t-2 py-9 ">
-                <div className="w-[50%] py-5 flex justify-center flex-col p-3">
+                <div className="py-5 flex justify-center flex-col p-3">
                     <img src={Roast} alt="roasted"
+
                     />
                 </div>
 
 
-                <div className="w-[50%] px-2">
-                    <h3 className="font-bold text-2xl mb-8 text-yellow-400 mt-[80px]">Discover the Health Benefits of Fralon Peanuts' Nutritious Products</h3>
+                <div >
+                    <h3 className="font-bold text-2xl my-4 text-yellow-400 mt-[80px]">Discover the Health Benefits of Fralon Peanuts' Nutritious Products</h3>
                     <p>At Fralon Peanuts, we offer a range of delicious and nutritious peanut products that provide numerous health benefits. Our peanuts are packed with essential nutrients, making them a great addition to a balanced diet.</p>
 
                     <div className="flex justify-start flex-row mt-7 gap-x-9 p-3">

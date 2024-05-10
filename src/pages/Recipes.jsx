@@ -23,14 +23,14 @@ const Recipes = () => {
     const isLastRecipe = currentRecipeIndex === state.recipes.length - 1;
 
     return (
-        <div className="w-full p-4 ">
+        <div className="w-full p-3 ">
             <h2 className="text-center text-3xl text-yellow-400 font-bold p-2 mb-9">Experience recipes from Fralon Products</h2>
             <div className="flex w-[100%] flex-col justify-center md:flex-row">
                 <div className="w-[100%] md:w-1/2 mb-4 md:mb-0 ">
                     <img src={recipe.image} alt={recipe.name} className="w-full h-fit rounded-lg" />
                 </div>
                 <div className="w-[100%] md:w-1/2 p-4 bg-white rounded-lg shadow-lg items-center mt-2">
-                    <h1 className="text-3xl text-yellow-400 font-semibold mb-6 mt-7">{recipe.name}</h1>
+                    <h1 className="text-3xl text-yellow-400 font-semibold mb-6 mt-5">{recipe.name}</h1>
                     <p className="text-lg text-gray-700 mb-6">{recipe.introduction}</p>
 
                     <div>

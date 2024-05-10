@@ -24,12 +24,12 @@ const Contact = () => {
             className='flex flex-col justify-center'>
             <h2 className="text-center text-3xl text-yellow-400 font-bold p-6">Get in touch with Fralon</h2>
             <section className="p-3 mb-9 ml-4">
-                <p className="text-center">Delicious</p>
-                <h2 className="text-3xl font-bold text-yellow-400 text-center my-2">Contact Information</h2>
+                <p className="text-center py-3">Delicious</p>
+                <h2 className="text-3xl font-bold text-yellow-400 text-center my-2 py-3">Contact Information</h2>
                 <p className="text-left">We'd love to hear from you. Reach out to us using any of the methods below.</p>
 
-                <div className="flex justify-between flex-col p-4 md:flex-row mt-8 items-center">
-                    <div className="flex justify-start flex-col flex-wrap p-">
+                <div className="flex justify-between flex-col p-4 md:flex-row  mt-8 items-center">
+                    <div className="flex justify-start flex-col">
 
                         <h3 className="text-lg font-semibold mt-3">Email</h3>
                         <CiMail
@@ -52,7 +52,7 @@ const Contact = () => {
                         <p>Nairobi, Kenya</p>
                         <p>Get Directions </p>
                     </div>
-                    <div className="mt-6 flex items-center">
+                    <div className="mt-5 flex items-center">
                         <img src={Customer} alt="customer service agents"
 
                         />
@@ -64,10 +64,10 @@ const Contact = () => {
             </section>
 
 
-            <p className="ml-6 text-center">Fresh</p>
-            <h2 className='text-3xl text-yellow-400 font-bold font-sans ml-5 my-2 text-center'>Get in touch</h2>
-            <section className='text-center font-sans p-4 mb-8'>
-                <p className="text-center mb-3 ml-1">Have a question or need assistance? We're here to help!</p>
+            <p className="text-center">Fresh</p>
+            <h2 className='text-3xl text-yellow-400 font-bold font-sans my-2  py-3 text-center'>Get in touch</h2>
+            <section className='text-center font-sans mb-8'>
+                <p className="text-center my-3">Have a question or need assistance? We're here to help!</p>
                 < Form />
 
 

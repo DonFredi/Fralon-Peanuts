@@ -13,7 +13,7 @@ const Products = () => {
 
     return (
         <div className='p-3'>
-            <h2 className="text-center text-3xl text-yellow-400 font-bold my-3">Experience Delicious Fralon Products</h2>
+            <h2 className="text-center text-3xl text-yellow-400 font-bold my-2">Experience Delicious Fralon Products</h2>
             <article className='flex flex-col items-center justify-start md:flex-row'>
                 <div className='w-[50%] md:w-1/2 flex justify-start items-center flex-col'>
 
@@ -66,9 +66,9 @@ const Products = () => {
 
             </article>
 
-            <section className='mt-[100px] p-5'>
-                <h3 className='text-center'>Delicious</h3>
-                <h2 className='text-3xl text-yellow-400 font-bold font-serif text-center mb-2'>Products</h2>
+            <section className='mt-[80px] p-5'>
+                <h3 className='text-center py-3'>Delicious</h3>
+                <h2 className='py-3 text-3xl text-yellow-400 font-bold font-serif text-center mb-2'>Products</h2>
 
                 <p className='text-center'>Discover our wide range of peanut products, including raw peanuts, roasted peanuts, and peanut butter.</p>
 
@@ -93,8 +93,8 @@ const Products = () => {
             </section>
             <section className='mt-[100px] flex justify-start items-center flex-col gap-x-5 p-6'>
                 <div className='text-center'>
-                    <h3 className='text-center'>Nutritious</h3>
-                    <h2 className='text-3xl font-bold text-yellow-400 mb-4 text-center'>Discover the Nutritional Benefits of Peanuts</h2>
+                    <h3 className='text-center py-3'>Nutritious</h3>
+                    <h2 className='text-3xl font-bold text-yellow-400 mb-4 text-center py-3'>Discover the Nutritional Benefits of Peanuts</h2>
                     <p>Peanuts and peanut products are packed with essential nutrients and offer numerous health benefits. They are a great source of protein, fiber, healthy fats, and vitamins, making them a nutritious addition to your diet.</p>
                     <div className='mt-3 flex flex-row justify-center'>
                         <Link className="p-2 bg-slate-100 border-black border-2 hover:bg-slate-200">Learn More</Link>
@@ -123,8 +123,8 @@ const Products = () => {
             </section>
             <section className='flex justify-start md:flex-row flex-col gap-x-6 p-3 items-center mt-[100px]'>
                 <div className='flex flex-col gap-y-4'>
-                    <h3 className='text-center'>Delicious</h3>
-                    <h2 className='text-2xl font-bold text-yellow-400 text-center'>Boost Your Health with Fralon Peanuts</h2>
+                    <h3 className='text-center py-3'>Delicious</h3>
+                    <h2 className='text-2xl font-bold text-yellow-400 text-center py-3'>Boost Your Health with Fralon Peanuts</h2>
                     <p>Incorporating Fralon Peanuts into your diet can provide numerous health benefits. Packed with essential nutrients and antioxidants, these peanuts can help improve heart health, boost brain function, and support weight management.</p>
                     <div className='flex flex-row gap-x-3 py-2 mb-20'>
                         <Link className=" p-2 bg-slate-100 border-black border-2 hover:bg-slate-200">Learn More</Link>

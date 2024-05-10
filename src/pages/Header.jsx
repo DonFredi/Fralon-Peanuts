@@ -29,22 +29,24 @@ const Header = () => {
             <header className='bg-white-300 w-[100%] flex justify-between px-2 py-6  opacity-70 shadow-xl h-[85px]'>
 
                 {width < 760 ?
-                    <div>
+                    <div className='flex flex-row justify-between w-[57%]'>
 
                         <RxHamburgerMenu
 
                             onClick={handleHamBtn}
                             className='bg-transparent text-black right-0 top-6 w-[48px] h-[48px] hover:bg-slate-300 px-2'
                         />
-
+                        <div>
+                            <h1 className='logo text-center text-3xl mt-1 flex justify-center font-extrabold text-yellow-400 '>Fralon</h1>
+                        </div>
 
                     </div>
                     :
                     <div className='flex justify-between gap-x-20 flex-row'>
 
                         <h1
-                            id="logo"
-                            className='text-3xl font-light text-yellow-400 mr-8 py-3 ml-3'
+
+                            className=' logo text-center mb-7 text-4xl  text-yellow-400 mr-8  ml-3'
                         >Fralon</h1>
                         <nav className='flex justify-around flex-row w-[100%] font-serif text-xl'>
                             <Link to="/"
