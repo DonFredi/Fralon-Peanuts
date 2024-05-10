@@ -14,9 +14,9 @@ import RootLayout from './Layouts/RootLayout'
 import Home from './pages/Home';
 import Recipes from './pages/Recipes'
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 import Products from './pages/Products';
 import Cart from './pages/Cart';
-import NotFound from './pages/NotFound';
 import { DataProvider } from './pages/DataContext';
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
         <Route path="recipes" element={<Recipes />} />
         <Route path="cart" element={<Cart />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="notfound" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   )
