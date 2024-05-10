@@ -121,12 +121,12 @@ const Products = () => {
                 </div>
 
             </section>
-            <section className='flex justify-start flex-row gap-x-6 p-3 items-center mt-[100px]'>
-                <div className='flex flex-col gap-y-4 w-[50%]'>
-                    <h3 className='ml-1'>Delicious</h3>
-                    <h2 className='text-2xl font-bold text-yellow-400'>Boost Your Health with Fralon Peanuts</h2>
+            <section className='flex justify-start md:flex-row flex-col gap-x-6 p-3 items-center mt-[100px]'>
+                <div className='flex flex-col gap-y-4'>
+                    <h3 className='text-center'>Delicious</h3>
+                    <h2 className='text-2xl font-bold text-yellow-400 text-center'>Boost Your Health with Fralon Peanuts</h2>
                     <p>Incorporating Fralon Peanuts into your diet can provide numerous health benefits. Packed with essential nutrients and antioxidants, these peanuts can help improve heart health, boost brain function, and support weight management.</p>
-                    <div className='flex flex-row gap-x-3'>
+                    <div className='flex flex-row gap-x-3 py-2 mb-20'>
                         <Link className=" p-2 bg-slate-100 border-black border-2 hover:bg-slate-200">Learn More</Link>
                         <Link
                             to="/cart"
@@ -136,7 +136,7 @@ const Products = () => {
 
                 </div>
                 <img src={Place} alt="place holder"
-                    className='w-[60%] px-6'
+                    className='px-4'
                 />
             </section>
             <article className='flex flex-col p-6 mt-[100px] items-center gap-y-5'>
