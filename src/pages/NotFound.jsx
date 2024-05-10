@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const NotFound = () => {
     return (
-        <div className='p-4'>
-            <h1>404 - Not Found</h1>
+        <div className='py-4'>
+            <h1 className='text-center' >404 - Not Found</h1>
             <Link
-                className='text-blue-400 text-underline'
+                className='text-blue-600 text-center text-underline'
                 to="/">Visit homepage</Link>
         </div>
     );
