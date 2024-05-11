@@ -51,10 +51,10 @@ const Header = () => {
                         <nav className='flex justify-around flex-row w-[100%] font-serif text-xl'>
                             <Link to="/"
 
-                                className='flex-1 text-blue-900 font-sans font-semibold  w-100% px-3 border-b-4 border-transparent hover:border-yellow-500 hover:text-yellow-500 '>Home</Link>
-                            <Link to="products" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 border-b-4 border-transparent hover:border-yellow-500  hover:text-yellow-500 '>Products</Link>
-                            <Link to="recipes" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 border-b-4 border-transparent hover:border-yellow-500 hover:text-yellow-500 '>Recipes</Link>
-                            <Link to="contact" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 border-b-4 border-transparent hover:border-yellow-500 hover:text-yellow-500 '>Contacts</Link>
+                                className='flex-1 text-blue-900 font-sans font-semibold  w-100% px-3 border-b-4 border-transparent hover:text-yellow-500 '>Home</Link>
+                            <Link to="products" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 border-b-4 border-transparent hover:text-yellow-500 '>Products</Link>
+                            <Link to="recipes" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 border-b-4 border-transparent hover:text-yellow-500 '>Recipes</Link>
+                            <Link to="contact" className='flex-1 text-blue-900 font-sans font-semibold w-100% px-3 border-b-4 border-transparent hover:text-yellow-500 '>Contacts</Link>
 
                         </nav>
 
