@@ -60,7 +60,7 @@ const Products = () => {
                     <hr />
                     <h2 className='font-semibold text-xl my-4'>Returns</h2>
                     <p>If you are not completely satisfied with your purchase, please contact our customer service team for assistance.</p>
-                    <hr />
+
 
                 </div>
 
