@@ -15,7 +15,7 @@ const RootLayout = () => {
             <Header />
 
 
-            <main className='bg-white-900 w-[100%] my-2'>
+            <main className='bg-white-900 w-[100%]'>
                 <Outlet />
             </main>
             <footer className='h-fit  bg-yellow-400 p-3 text-sm font-light text-blue-800'>

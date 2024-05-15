@@ -26,7 +26,7 @@ const Header = () => {
 
     return (
         <div>
-            <header className='bg-white-300 w-[100%] flex justify-between px-2 py-8 items-center h-[85px]'>
+            <header className='bg-white-300 w-[100%] flex justify-between px-2 py-8 items-center h-[100px]'>
 
                 {width < 760 ?
                     <div className='flex flex-row justify-between items-center w-[100%]'>
