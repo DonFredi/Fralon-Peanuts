@@ -23,9 +23,9 @@ const Contact = () => {
             id="contact"
             className='flex flex-col justify-center'>
             <h2 className="text-center text-3xl text-yellow-400 font-bold p-6">Get in touch with Fralon</h2>
-            <section className="p-3 mb-9 ml-4">
-                <p className="text-center py-3">Delicious</p>
-                <h2 className="text-3xl font-bold text-yellow-400 text-center my-2 py-3">Contact Information</h2>
+            <section className="px-4 py-2">
+                <p className="text-center py-2">Delicious</p>
+                <h2 className="text-3xl font-bold text-yellow-400 text-center py-3">Contact Information</h2>
                 <p className="text-left">We'd love to hear from you. Reach out to us using any of the methods below.</p>
 
                 <div className="flex justify-between flex-col p-4 md:flex-row  mt-8 items-center">

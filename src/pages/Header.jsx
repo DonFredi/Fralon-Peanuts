@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GiShoppingCart } from "react-icons/gi";
@@ -29,7 +29,7 @@ const Header = () => {
             <header className='bg-white-300 w-[100%] flex justify-between px-2 py-6  opacity-70 shadow-xl h-[85px]'>
 
                 {width < 760 ?
-                    <div className='flex flex-row justify-between w-[57%]'>
+                    <div className='flex flex-row justify-between items-center w-[68%]'>
 
                         <RxHamburgerMenu
 
@@ -37,7 +37,7 @@ const Header = () => {
                             className='bg-transparent text-black right-0 top-6 w-[48px] h-[48px] hover:bg-slate-300 px-2'
                         />
                         <div>
-                            <h1 className='logo text-center text-3xl mt-1 flex justify-center font-extrabold text-yellow-400 '>Fralon</h1>
+                            <h1 className='logo text-center flex justify-center text-4xl text-yellow-400 '> <span className='text-4xl text-bold'>Fralon</span>Peanuts</h1>
                         </div>
 
                     </div>
