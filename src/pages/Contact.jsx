@@ -21,12 +21,12 @@ const Contact = () => {
     return (
         <div
             id="contact"
-            className='flex flex-col justify-center'>
-            <h2 className="text-center text-3xl text-yellow-400 font-bold p-6">Get in touch with Fralon</h2>
+            className='flex flex-col justify-start'>
+            <h2 className="text-center text-3xl text-yellow-400 font-bold p-4">Get in touch with Fralon</h2>
             <section className="px-4 py-2">
                 <p className="text-center py-2">Delicious</p>
-                <h2 className="text-3xl font-bold text-yellow-400 text-center py-3">Contact Information</h2>
-                <p className="text-left">We'd love to hear from you. Reach out to us using any of the methods below.</p>
+                <h2 className="text-3xl font-bold text-yellow-400 text-center py-3 mb-4">Contact Information</h2>
+                <p className="text-center">We'd love to hear from you. Reach out to us using any of the methods below.</p>
 
                 <div className="flex justify-between flex-col p-4 md:flex-row  mt-8 items-center">
                     <div className="flex justify-start flex-col">
@@ -54,7 +54,7 @@ const Contact = () => {
                     </div>
                     <div className="mt-5 flex items-center">
                         <img src={Customer} alt="customer service agents"
-
+                            className="w-[100%]"
                         />
                     </div>
 

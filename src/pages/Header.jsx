@@ -26,29 +26,31 @@ const Header = () => {
 
     return (
         <div>
-            <header className='bg-white-300 w-[100%] flex justify-between px-2 py-6  opacity-70 shadow-xl h-[85px]'>
+            <header className='bg-white-300 w-[100%] flex justify-between px-2 py-8 items-center h-[85px]'>
 
                 {width < 760 ?
-                    <div className='flex flex-row justify-between items-center w-[68%]'>
+                    <div className='flex flex-row justify-between items-center w-[100%]'>
 
                         <RxHamburgerMenu
 
                             onClick={handleHamBtn}
-                            className='bg-transparent text-black right-0 top-6 w-[48px] h-[48px] hover:bg-slate-300 px-2'
+                            className='bg-transparent text-black right-0 top-6 w-[48px] h-[48px] hover:bg-yellow-400 rounded-sm px-2'
                         />
-                        <div>
-                            <h1 className='logo text-center flex justify-center text-4xl text-yellow-400 '> <span className='text-4xl text-bold'>Fralon</span>Peanuts</h1>
+                        <div className='flex justify-center items-center'>
+                            <p className='text-3xl text-yellow-400'><span className='text-extrabold'>Fralon</span>Peanuts</p>
                         </div>
+                        <div></div>
 
                     </div>
                     :
-                    <div className='flex justify-between gap-x-20 flex-row'>
+                    <div className='flex justify-between gap-x-20 flex-row items-center'>
+                        <div className='flex flex-row items-center'>
 
-                        <h1
+                            <p className='text-4xl text-yellow-500'><span className='text-extrabold'>Fralon</span>Peanuts</p>
 
-                            className=' logo text-center mb-7 text-4xl  text-yellow-400 mr-8  ml-3'
-                        >Fralon</h1>
-                        <nav className='flex justify-around flex-row w-[100%] font-serif text-xl'>
+                        </div>
+
+                        <nav className='flex justify-around flex-row w-[100%] font-serif text-xl items-center'>
                             <Link to="/"
 
                                 className='flex-1 text-blue-900 font-sans font-semibold  w-100% px-3 border-b-4 border-transparent hover:text-yellow-500 '>Home</Link>
@@ -86,10 +88,7 @@ const Header = () => {
                     className={`fixed flex justify-between flex-col top-0 h-[70%] w-full bg-gray-200 z-50 overflow-hidden transition-transform duration-500 ease-in-out transform ${sidebar ? 'translate-x-0' : '-translate-x-full'}`}>
 
                     <div className='top-[10px] py-7 px-5  flex justify-between flex-row items-center'>
-                        <span
-                            id="logo"
-                            className='text-yellow-500 text-3xl font-bold p-2'>Fralon Peanuts</span>
-
+                        <p className='text-4xl text-yellow-500'><span className='text-extrabold'>Fralon</span>Peanuts</p>
                         <IoChevronBack
                             onClick={closeSidebar}
                             className='text-2xl bg-red-400 my-auto text-white text-center h-[2rem] w-[2rem] font-bold hover:bg-red-300 rounded-md'

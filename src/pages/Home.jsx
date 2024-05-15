@@ -103,7 +103,7 @@ const About = () => {
             </section>
             <div
                 id="testimonials"
-                className="py-6 mt-[130px] flex justify-start flex-col gap-x-6 border-t-2 md:flex-row p-8">
+                className="py-6 px-3 mx-4 mt-[130px] flex justify-start flex-col gap-x-6 border-t-2 md:flex-row">
                 <div className="h-[50%] w-full">
                     <img src={Client2} alt="placeholder"
                         className="md:w-[50%]"
@@ -126,7 +126,7 @@ const About = () => {
                 </div>
             </div>
 
-            <section className="flex justify-between border-t-2 flex-col mt-[60px] p-6 gap-x-3 border-b-2 items-center md:flex-row">
+            <section className="flex justify-between border-t-2 flex-col mt-[60px] p-6 gap-x-3 items-center md:flex-row">
                 <div className="flex justify-between flex-col md:w-[50%] w-[100%]">
                     <div  >
                         <h2 className="font-bold text-3xl text-yellow-400 mt-[60px]">Discover Our Peanut Products</h2>

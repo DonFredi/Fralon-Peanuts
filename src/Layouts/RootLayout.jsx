@@ -15,11 +15,11 @@ const RootLayout = () => {
             <Header />
 
 
-            <main className='bg-white-900 w-[100%] my-9'>
+            <main className='bg-white-900 w-[100%] my-2'>
                 <Outlet />
             </main>
-            <footer className='h-fit  bg-yellow-400 p-3 text-sm font-light'>
-
+            <footer className='h-fit  bg-yellow-400 p-3 text-sm font-light text-blue-800'>
+                <p className='text-4xl'><span className='text-extrabold'>Fralon</span>Peanuts</p>
                 <div className='flex justify-evenly flex-col mb-4 p-3 md:flex-row'>
 
                     <div className='flex justify-start flex-col gap-1 font-light mt-5 text-lg text-blue-800'>
