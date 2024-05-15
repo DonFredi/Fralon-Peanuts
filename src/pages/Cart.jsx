@@ -43,9 +43,9 @@ const Cart = () => {
 
             <div
                 id="cart-div"
-                className='md:w-[35%] flex justify-start flex-col bg-yellow-400 rounded-l h-[100vh] mt-7 w-[100%]'>
+                className='md:w-[35%] flex justify-start flex-col bg-yellow-400 rounded-l h-[100vh] mt-7 w-[100%] mb-5'>
                 <h3 className='text-center my-4 font-extrabold font-serif capitalize'>Items in my Cart</h3>
-                <div className='flex justify-start flex-row gap-x-20 w-[100%] items-center px-9 ml-7'>
+                <div className='flex justify-around flex-row gap-x-20 w-[100%] px-9 ml-7'>
                     <p className='font-bold'>Item</p>
                     <p className='font-bold'>Price</p>
                     <p className='font-bold'>Quantity</p>

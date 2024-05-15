@@ -63,11 +63,11 @@ const Contact = () => {
 
             </section>
 
+            <section className='text-center font-sans mb-8 flex justify-start flex-col items-center'>
+                <p className="text-center">Fresh</p>
+                <h2 className='text-3xl text-yellow-400 font-bold font-sans my-2  py-3 text-center'>Get in touch</h2>
 
-            <p className="text-center">Fresh</p>
-            <h2 className='text-3xl text-yellow-400 font-bold font-sans my-2  py-3 text-center'>Get in touch</h2>
-            <section className='text-center font-sans mb-8'>
-                <p className="text-center my-3">Have a question or need assistance? We're here to help!</p>
+                <p className="text-center my-3 p-2">Have a question or need assistance? We're here to help!</p>
                 < Form />
 
 
