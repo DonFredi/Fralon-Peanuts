@@ -109,9 +109,9 @@ const Header = () => {
                             className='block text-blue-900 font-bold w-100% px-2 text-center py-3  hover:bg-yellow-400 '>Contacts</Link>
 
                     </div>
-                    <div className='flex justify-center gap-x-3 text-blue-600 flex-row p-4'>
-                        <Link>Home |</Link>
-                        <Link>Products |</Link>
+                    <div className='flex justify-center gap-x-3 text-blue-600 flex-row py-4'>
+                        <Link to='/'>Home |</Link>
+                        <Link to='products'>Products |</Link>
                         <Link>About us |</Link>
                     </div>
                 </div>

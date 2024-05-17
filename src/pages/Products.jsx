@@ -13,7 +13,7 @@ const Products = () => {
 
     return (
         <div className='p-3'>
-            <h2 className="text-center text-3xl text-yellow-400 font-bold my-2">Experience Delicious Fralon Products</h2>
+            <h2 className="text-center text-3xl text-yellow-400 font-bold my-4">Experience Delicious Fralon Products</h2>
             <article className='flex flex-col items-center justify-start md:flex-row'>
                 <div className='w-[50%] md:w-1/2 flex justify-start items-center flex-col'>
 

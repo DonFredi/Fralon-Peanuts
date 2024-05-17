@@ -50,10 +50,10 @@ const Cart = () => {
                     <p className='font-bold'>Price</p>
                     <p className='font-bold'>Quantity</p>
                 </div>
-                <ol className='w-[100%] flex justify-start flex-col mb-5 px-4'>
+                <ol className='w-[100%] flex justify-center flex-col mb-5 px-4'>
                     {state.cartItems && state.cartItems.length > 0 ? (
                         state.cartItems.map(item => (
-                            <li key={item.id} className='w-[100%] flex justify-start mt-3 flex-row items-center text-center mb-2 px-9 gap-x-20'>
+                            <li key={item.id} className='w-[100%] flex justify-around mt-3 flex-row items-center text-center mb-2 px-9 gap-x-20'>
                                 <img src={item.src} alt={item.title?.item} className='w-[50px] h-[50px] rounded-lg' />
                                 <p className='font-semibold'>{item.title?.price}/=</p>
                                 <p className='font-semibold'>{item.quantity}</p>
