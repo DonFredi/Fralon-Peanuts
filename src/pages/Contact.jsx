@@ -11,8 +11,8 @@ import { CiLocationOn } from "react-icons/ci"
 import { Link } from 'react-router-dom';
 
 import Customer from '../assets/agent.jpg';
-import Map from '../assets/map.jpeg';
 import Client1 from '../assets/client1.jpg';
+import MapIframe from "../components/MapIframe";
 
 
 const Contact = () => {
@@ -104,11 +104,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            <section className=" p-3 flex flex-col w-[100%]">
-                <img src={Map} alt="maps"
-                    className="h-[500px]"
-                />
-            </section>
+            <MapIframe />
 
             <article className=" p-5 flex gap-4 justify-center items-center flex-col ">
 
