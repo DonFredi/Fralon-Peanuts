@@ -9,4 +9,7 @@ export default defineConfig({
   build: {
     outDir: 'build', // Specify the output directory as 'build'
   },
+  server: {
+    historyApiFallback: true, // Add this line to handle client-side routing
+  },
 });
