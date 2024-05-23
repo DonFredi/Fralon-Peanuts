@@ -40,9 +40,7 @@ function App() {
   return (
     <div>
       <DataProvider>
-        <RouterProvider router={router}>
-          <RootLayout />
-        </RouterProvider>
+        <RouterProvider router={router} />
       </DataProvider>
     </div>
 
