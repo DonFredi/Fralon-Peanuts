@@ -40,8 +40,8 @@ const About = () => {
             <article
                 id="article"
                 className="flex justify-evenly flex-row border-b-2 py-6 px-2 my-5">
-                <div className="flex justify-start flex-col p-5 items-center">
-                    <h2 className="text-center text-3xl font-bold text-yellow-400 my-9">Discover the Delicious Variety  of Peanut Products at Fralon Peanuts</h2>
+                <div className="flex justify-start flex-col p-5 items-center w-[100%]">
+                    <h2 className="text-center text-3xl font-bold text-yellow-400 my-9 flex-nowrap">Discover the Delicious Variety  of Peanut Products at Fralon Peanuts</h2>
                     <p className="text-left ">At Fralon Peanuts, we offer a wide range of peanut products, including peanut butter, roasted peanuts, and ground peanuts. Our products are made with the highest quality peanuts and are packed with flavor and nutrition. Whether you're looking for a tasty snack or a versatile ingredient for your recipes, we have the perfect peanut product for you.</p>
 
                 </div>
@@ -121,7 +121,7 @@ const About = () => {
                     <p className="text-lg font-light">I absolutely love Fralon Peanuts! They have the best peanut butter I've ever tasted. Highly recommend!</p>
                     <div>
                         <p>Jane Smith</p>
-                        <p>Marketing Manager, AIRTEL</p>
+                        <p>Freelancer</p>
                     </div>
                 </div>
             </div>

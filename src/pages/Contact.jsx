@@ -116,8 +116,8 @@ const Contact = () => {
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
                         <div className="bg-white rounded-lg p-4 text-center">
                             <img src={Client1} alt="clients" className="w-full mb-2 rounded-md h-fit" />
-                            <p>Jane Doe</p>
-                            <p>CEO & Founder</p>
+                            <p>Eugene O.</p>
+                            <p>Designer</p>
                             <p>John is the visionary leader behind Fralon Peanuts, driving innovation and growth.</p>
                             <div
                                 className="flex flex-row justify-center gap-x-4 p-3 text-xl"
@@ -133,7 +133,7 @@ const Contact = () => {
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 text-center">
                         <div className="bg-white rounded-lg p-4 text-center">
                             <img src={Client1} alt="clients" className="w-full mb-2 rounded-md" />
-                            <p>Brenda</p>
+                            <p>Brenda K.</p>
                             <p>Co Founder</p>
                             <p>Jane is passionate about technology and leads our technical team with precision.</p>
                             <div
@@ -150,7 +150,7 @@ const Contact = () => {
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
                         <div className="bg-white rounded-lg p-4 text-center">
                             <img src={Client1} alt="clients" className="w-full mb-2 rounded-md" />
-                            <p>Michael Smith</p>
+                            <p>Michelle A.</p>
                             <p>Marketing Director</p>
                             <p>Michael is dedicated to creating impactful marketing campaigns that resonate with clients.</p>
                             <div
@@ -167,7 +167,7 @@ const Contact = () => {
                     <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 text-center">
                         <div className="bg-white rounded-lg p-4 text-center">
                             <img src={Client1} alt="clients" className="w-full mb-2 rounded-md" />
-                            <p>Emily Johnson</p>
+                            <p>Emily J.</p>
                             <p>Design Lead</p>
                             <p>Emily brings creativity and innovation to every design project, ensuring our brand stands out.</p>
                             <div

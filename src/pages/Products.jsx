@@ -152,7 +152,7 @@ const Products = () => {
                     <img src={Client1} alt="place holder"
                         className='w-[48px] h-[48px] rounded-full'
                     />
-                    <p>John Doe |</p>
+                    <p>Lillian M.|</p>
                     <p>Food Critic, Tasty Times</p>
                 </div>
 
