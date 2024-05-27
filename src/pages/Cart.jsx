@@ -45,20 +45,20 @@ const Cart = () => {
                 id="cart-div"
                 className='md:w-[35%] flex justify-start flex-col bg-yellow-400 rounded-l h-[100vh] mt-7 w-[100%] mb-5'>
                 <h3 className='text-center my-4 font-extrabold font-serif capitalize'>Items in my Cart</h3>
-                <div className='flex justify-around flex-row gap-x-20 w-[100%] px-9 ml-7'>
+                <div className='flex justify-start flex-row gap-x-20 w-[100%] px-9 ml-7'>
                     <p className='font-bold'>Item</p>
                     <p className='font-bold'>Price</p>
                     <p className='font-bold'>Quantity</p>
                 </div>
-                <ol className='w-[100%] flex justify-center flex-col mb-5 px-4'>
+                <ol className='w-[100%] flex justify-start flex-col mb-5 px-4'>
                     {state.cartItems && state.cartItems.length > 0 ? (
                         state.cartItems.map(item => (
-                            <li key={item.id} className='w-[100%] flex justify-around mt-3 flex-row items-center text-center mb-2 px-9 gap-x-20'>
+                            <li key={item.id} className='w-[100%] flex justify-around mt-3 md:ml-0 flex-row items-center text-center mb-2 px-9 gap-x-20'>
                                 <img src={item.src} alt={item.title?.item} className='w-[50px] h-[50px] rounded-lg' />
                                 <p className='font-semibold'>{item.title?.price}/=</p>
                                 <p className='font-semibold'>{item.quantity}</p>
 
-                                <button className="p-2  bg-blue-600 rounded-lg text-white hover:bg-blue-500" onClick={() => handleRemove(item.id)}>x</button>
+                                <button className="p-2 bg-blue-500 rounded-lg text-white hover:bg-blue-400 hover:underline" onClick={() => handleRemove(item.id)}>Remove</button>
 
 
                             </li>

@@ -103,7 +103,7 @@ const About = () => {
             </section>
             <div
                 id="testimonials"
-                className="py-6 px-3 mx-4 mt-[130px] flex justify-start flex-col gap-x-6 border-t-2 md:flex-row">
+                className="py-6 px-3 mx-4 mt-[130px] flex justify-start flex-col gap-x-6  md:flex-row">
                 <div className="h-[50%] w-full">
                     <img src={Client2} alt="placeholder"
                         className="md:w-[50%]"
