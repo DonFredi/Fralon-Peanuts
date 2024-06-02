@@ -66,7 +66,7 @@ const Products = () => {
 
             </article>
 
-            <section className='mt-[80px] p-5'>
+            <section className='mt-[70px] p-5'>
                 <h3 className='text-center py-3'>Delicious</h3>
                 <h2 className='py-3 text-3xl text-yellow-400 font-bold font-serif text-center mb-2'>Products</h2>
 
@@ -92,7 +92,7 @@ const Products = () => {
 
             </section>
             <section className='mt-[100px] flex justify-start items-center flex-col gap-x-5 p-6'>
-                <div className='text-center'>
+                <div className='text-center py-4'>
                     <h3 className='text-center py-3'>Nutritious</h3>
                     <h2 className='text-3xl font-bold text-yellow-400 mb-4 text-center py-3'>Discover the Nutritional Benefits of Peanuts</h2>
                     <p>Peanuts and peanut products are packed with essential nutrients and offer numerous health benefits. They are a great source of protein, fiber, healthy fats, and vitamins, making them a nutritious addition to your diet.</p>
@@ -121,7 +121,7 @@ const Products = () => {
                 </div>
 
             </section>
-            <section className='flex justify-start md:flex-row flex-col gap-x-6 p-3 items-center mt-[100px]'>
+            <section className='flex justify-start md:flex-row flex-col gap-x-6 p-3 items-center mt-[80px]'>
                 <div className='flex flex-col gap-y-4'>
                     <h3 className='text-center py-3'>Delicious</h3>
                     <h2 className='text-2xl font-bold text-yellow-400 text-center py-3'>Boost Your Health with Fralon Peanuts</h2>

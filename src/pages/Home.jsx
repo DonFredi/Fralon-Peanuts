@@ -135,7 +135,7 @@ const About = () => {
                     <div className="flex justify-start flex-row">
                         <Link
                             to='/cart'
-                            className="p-3 rounded-lg bg-blue-500 hover:bg-blue-600 text-white mr-4">Shop</Link>
+                            className="p-3 bg-blue-500 hover:bg-blue-600 text-white mr-4">Shop</Link>
                         <Link className="p-2 bg-slate-100 text-black border-2 border-black hover:bg-slate-200">Learn More</Link>
 
                     </div>
