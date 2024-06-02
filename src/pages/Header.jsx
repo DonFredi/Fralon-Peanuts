@@ -29,7 +29,7 @@ const Header = () => {
             <header className='bg-white-300 w-[100%] flex justify-between px-2 py-8 items-center h-[100px]'>
 
                 {width < 760 ?
-                    <div className='flex flex-row justify-between items-center w-[100%]'>
+                    <div className='flex flex-row justify-between  w-[100%]'>
 
                         <RxHamburgerMenu
 
@@ -43,14 +43,14 @@ const Header = () => {
 
                     </div>
                     :
-                    <div className='flex justify-between gap-x-20 flex-row items-center'>
-                        <div className='flex flex-row items-center'>
+                    <div className='flex justify-between gap-x-[500px] items-center flex-row py-3'>
 
-                            <p className='text-4xl text-yellow-500'><span className='text-extrabold'>Fralon</span>Peanuts</p>
 
-                        </div>
+                        <p className='text-4xl text-yellow-500 ml-9'><span className='text-extrabold'>Fralon</span>Peanuts</p>
 
-                        <nav className='flex justify-around flex-row w-[100%] font-serif text-xl items-center'>
+
+
+                        <nav className='flex justify-end flex-row w-[100%] font-serif text-xl'>
                             <Link to="/"
 
                                 className='flex-1 text-blue-900 font-sans font-semibold  w-100% px-3 border-b-4 border-transparent hover:text-yellow-500 '>Home</Link>

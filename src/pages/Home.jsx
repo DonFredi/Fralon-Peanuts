@@ -23,7 +23,7 @@ const About = () => {
 
                         <div className="flex flex-row gap-x-6 justify-center">
                             <Link to="cart"
-                                className="p-3 text-center text-xl font-bold rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-sans">Shop Now</Link>
+                                className="p-3 text-center text-xl font-bold bg-blue-500 hover:bg-blue-600 text-white ">Shop Now</Link>
 
                         </div>
                     </div>
@@ -39,7 +39,7 @@ const About = () => {
 
             <article
                 id="article"
-                className="flex justify-evenly flex-row border-b-2 py-6 px-2 my-5">
+                className="flex justify-evenly flex-row py-6 px-2 my-5">
                 <div className="flex justify-start flex-col p-5 items-center w-[100%]">
                     <h2 className="text-center text-3xl font-bold text-yellow-400 my-9 flex-nowrap">Discover the Delicious Variety  of Peanut Products at Fralon Peanuts</h2>
                     <p className="text-left ">At Fralon Peanuts, we offer a wide range of peanut products, including peanut butter, roasted peanuts, and ground peanuts. Our products are made with the highest quality peanuts and are packed with flavor and nutrition. Whether you're looking for a tasty snack or a versatile ingredient for your recipes, we have the perfect peanut product for you.</p>
@@ -76,10 +76,10 @@ const About = () => {
             </section>
             <section
                 id="section"
-                className="flex justify-evenly flex-row gap-x-3 mt-[100px] border-t-2 py-9 ">
+                className="flex justify-evenly flex-row gap-x-3 mt-[100px] py-9 ">
                 <div className="py-5 flex justify-center flex-col p-3 w-[100%]">
                     <img src={Roast} alt="roasted"
-
+                        className="h-[550px]"
                     />
                 </div>
 
@@ -106,7 +106,7 @@ const About = () => {
                 className="py-6 px-3 mx-4 mt-[130px] flex justify-start flex-col gap-x-6  md:flex-row">
                 <div className="h-[50%] w-full">
                     <img src={Client2} alt="placeholder"
-                        className="md:w-[50%]"
+                        className="w-[100%] h-full"
                     />
                 </div>
 
@@ -126,7 +126,7 @@ const About = () => {
                 </div>
             </div>
 
-            <section className="flex justify-between border-t-2 flex-col mt-[60px] p-6 gap-x-3 items-center md:flex-row">
+            <section className="flex justify-between flex-col mt-[40px] p-6 gap-x-3 items-center md:flex-row">
                 <div className="flex justify-between flex-col md:w-[50%] w-[100%]">
                     <div  >
                         <h2 className="font-bold text-3xl text-yellow-400 mt-[60px]">Discover Our Peanut Products</h2>
@@ -140,7 +140,7 @@ const About = () => {
 
                     </div>
                 </div>
-                <div className=" flex justify-center p-3 mt-8 md:w-[50%] w-[100%]">
+                <div className=" flex justify-center p-3 mt-8 md:w-[50%] w-[100%] h-[500px]">
                     <img src={Spoon} alt="pbon spoon"
                     />
                 </div>
