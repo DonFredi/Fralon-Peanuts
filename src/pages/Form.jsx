@@ -15,6 +15,23 @@ const Form = () => {
 
 
     const onSubmit = async (data, e) => {
+        try {
+            const response = await fetch('http://localhost:3500/contact-us', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ data }),
+            });
+            if (response.error) {
+                console.log(response.error)
+            }
+            const result = await response.json();
+            console.log(result);
+
+        } catch (error) {
+            console.error('Error:', error);
+        }
         await new Promise((resolve) => setTimeout(resolve, 1000));
         console.log(data);
         e.target.reset(); // Reset the form fields

@@ -11,7 +11,7 @@ const RootLayout = () => {
 
 
     return (
-        <div className='flex justify-around flex-col w-[100%] text-l'>
+        <div className='flex justify-around  flex-col w-[100%] text-l'>
             <Header />
 
 
@@ -19,7 +19,9 @@ const RootLayout = () => {
                 <Outlet />
             </main>
             <footer className='h-fit  bg-yellow-400 p-3 text-sm font-light text-blue-800'>
-                <p className='text-4xl'><span className='text-extrabold'>Fralon</span>Peanuts</p>
+                <p
+                    id='header'
+                    className='p-2 text-4xl'><span className='text-extrabold'>Fralon</span>Peanuts</p>
                 <div className='flex justify-evenly flex-col mb-4 p-3 md:flex-row'>
 
                     <div className='flex justify-start flex-col gap-1 font-light mt-5 text-lg text-blue-800'>

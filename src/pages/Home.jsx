@@ -22,6 +22,7 @@ const About = () => {
                         <p className=" mb-6 text-center">Our peanuts are carefully selected, roasted to perfection, and packed with nutrients.Whether you're looking for a healthy snack or versatile ingredient, Fralon Peanuts has you covered.</p>
 
                         <div className="flex flex-row gap-x-6 justify-center">
+
                             <Link to="cart"
                                 className="p-3 text-center text-xl font-bold bg-blue-500 hover:bg-blue-600 text-white ">Shop Now</Link>
 

@@ -1,26 +1,86 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaStar } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import DataContext from './DataContext';
-import Collection from "../assets/collection.jpg";
-import Place from "../assets/place.jpeg"
-import Client1 from "../assets/client1.jpg"
-import Roast from "../assets/roast.jpg"
+import Place from "../assets/place.jpeg";
+import Client1 from "../assets/client1.jpg";
+import Roast from "../assets/roast.jpg";
+
+
+import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowLeft } from "react-icons/fa6";
 
 const Products = () => {
-    const { state, handleCart } = useContext(DataContext);
+    const [index, setIndex] = useState(0);
+    const [type, setType] = useState(null);
+    const { state } = useContext(DataContext);
+
+    const smooth = { smooth: 'Smooth peanut butter for all' }
+    const crunchy = { crunchy: 'Crunchy peanut butter for you' }
+    const organic = { organic: 'This is the organic peanut butter' }
+
+
+    const handleSmooth = () => {
+        setType(smooth.smooth);
+    }
+    const handleCrunchy = () => {
+        setType(crunchy.crunchy);
+    }
+    const handleOrganic = () => {
+        setType(organic.organic);
+    }
+
+    const handleNext = () => {
+
+        setIndex((prevIndex) => (prevIndex + 1) % state.products.length)
+    }
+
+    const handlePrevious = () => {
+        setIndex((prevIndex) =>
+            prevIndex === 0 ? state.recipes.length - 1 : prevIndex - 1
+        );
+    }
+
+    const product = state.products[index];
+    const isFirstProduct = index === 0;
+    const isLastProduct = index === state.products.length - 1;
 
 
     return (
         <div className='p-3'>
             <h2 className="text-center text-3xl text-yellow-400 font-bold my-4">Experience Delicious Fralon Products</h2>
             <article className='flex flex-col items-center justify-start md:flex-row'>
-                <div className='w-[50%] md:w-1/2 flex justify-start items-center flex-col'>
+                <div className='flex flex-col md:w-[50%] w-[100%] '>
+                    <div className='flex justify-around flex-row items-center border-black border-2 py-6'>
 
-                    <img className='w-fit h-[500px]' src={Collection} alt="peanuts collection" />
+                        <button
+                            disabled={isFirstProduct}
+                            onClick={handlePrevious}
+                            className={`bg-slate-200 p-4 rounded-full ${isFirstProduct ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                            <FaArrowLeft
 
+                            />
+                        </button>
+
+
+                        <div className='flex  justify-center p-3'>
+
+                            <img className='w-fit h-[500px]' src={product.src} alt={product.src} />
+                        </div>
+
+
+                        <button
+                            onClick={handleNext}
+                            disabled={isLastProduct}
+                            className={`bg-slate-200 p-4 rounded-full ${isLastProduct ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                            <FaArrowRight
+                            />
+                        </button>
+
+                    </div>
+
+                    <p className='mt-6 p-3 text-center'>( {index + 1} / {state.products.length} )</p>
                 </div>
-
                 <div className='w-full md:w-1/2 p-6 text-left'>
                     <h1 className='text-left text-yellow-400 font-bold text-2xl p-3'>Fralon Peanut Butter</h1>
 
@@ -38,16 +98,24 @@ const Products = () => {
 
 
                     <div className='my-7 gap-x-4 flex justify-start flex-row'>
-                        <button className='px-3 py-2 bg-blue-500 text-white font-semibold hover:bg-blue-600'>Smooth Texture</button>
-                        <button className='px-3 py-2 bg-slate-400 text-white font-semibold hover:bg-blue-600'>Crunchy Texture</button>
-                        <button className='px-3 py-2 bg-slate-400 text-white font-semibold hover:bg-blue-600'>Organic Option</button></div>
+                        <button
+                            onClick={handleSmooth}
+                            className='px-3 py-2 bg-blue-500 text-white font-semibold hover:bg-blue-600'>Smooth Texture</button>
+                        <button
+                            onClick={handleCrunchy}
+                            className='px-3 py-2 bg-slate-400 text-white font-semibold hover:bg-blue-600'>Crunchy Texture</button>
+                        <button
+                            onClick={handleOrganic}
+                            className='px-3 py-2 bg-slate-400 text-white font-semibold hover:bg-blue-600'>Organic Option</button>
+
+                    </div>
+                    {type && (
+                        <p>{type}</p>
+                    )}
                     <div className=' my-6 w-full flex-col gap-y-3'>
                         <Link
-                            onClick={() => handleCart(item.id)}
-                            className='block bg-blue-600 text-white text-center mb-4 p-2 hover:bg-blue-500'>Add to Cart</Link>
-                        <Link
-                            to="cart"
-                            className='block bg-slate-200 text-center p-2 text-black border-2 border-black hover:bg-slate-100'>Buy Now</Link>
+                            className='block bg-blue-600 text-white text-center mb-4 p-2 hover:bg-blue-500'>Buy Now</Link>
+
 
                     </div>
 
@@ -75,13 +143,15 @@ const Products = () => {
                 <div className=' w-[100%] flex justify-around items-center flex-row gap-x-4 mt-9 flex-wrap'>
 
                     {state.products.map((item) => (
-                        <div className='flex items-center justify-start flex-col text-center py-6 gap-y-3' >
+                        <Link
+                            to={`/product/${item.id}`}
+                            className='flex items-center justify-start flex-col text-center py-6 mt-6 px-7 gap-y-3 hover:bg-yellow-400 rounded-lg' >
                             <img
                                 className='w-fit h-[200px]'
                                 src={item.src} alt={item.title.details} />
                             <p className='text-lg font-semibold'>{item.title.item}</p>
                             <p className='text-lg font-semibold'>Price: {item.title.price} Kshs</p>
-                        </div>
+                        </Link>
 
 
                     ))}
@@ -158,7 +228,7 @@ const Products = () => {
 
             </article>
             <section className="hover:opacity-80 bg-cover bg-center mt-[100px]" style={{
-                backgroundImage: `url(${Roast})` // Corrected the syntax here
+                backgroundImage: `url(${Roast})`
             }}>
                 <div className="bg-black bg-opacity-50 p-9 text-white text-center">
                     <h3 className="text-3xl font-bold mb-4">Discover Our Delicious Peanut Products</h3>

@@ -21,7 +21,7 @@ const Contact = () => {
     return (
         <div
             id="contact"
-            className='flex flex-col justify-start'>
+            className='flex flex-col justify-start py-4'>
             <h2 className="text-center text-3xl text-yellow-400 font-bold p-4">Get in touch with Fralon</h2>
             <section className="px-4 py-2">
                 <p className="text-center py-2">Delicious</p>
@@ -52,9 +52,9 @@ const Contact = () => {
                         <p>Nairobi, Kenya</p>
                         <p>Get Directions </p>
                     </div>
-                    <div className="mt-5 flex items-center">
+                    <div className="mt-5 flex items-center p-3">
                         <img src={Customer} alt="customer service agents"
-                            className="w-[100%]"
+                            className="w-[600px] h-fit"
                         />
                     </div>
 
@@ -63,9 +63,9 @@ const Contact = () => {
 
             </section>
 
-            <section className='text-center font-sans mb-8 flex justify-start flex-col items-center'>
+            <section className='text-center mb-8 flex justify-start flex-col items-center mt-[70px]'>
                 <p className="text-center">Fresh</p>
-                <h2 className='text-3xl text-yellow-400 font-bold font-sans my-2  py-3 text-center'>Get in touch</h2>
+                <h2 className='text-3xl text-yellow-400 font-bold my-2  py-3 text-center'>Get in touch</h2>
 
                 <p className="text-center my-3 p-2">Have a question or need assistance? We're here to help!</p>
                 < Form />
@@ -73,32 +73,32 @@ const Contact = () => {
 
             </section>
 
-            <section className='flex  justify-evenly  gap-x-9 flex-col items-center'>
+            <section className='flex  justify-evenly  gap-x-9 flex-col items-center mt-[50px]'>
                 <div className="flex justify-start p-3 flex-col">
                     <p className="text-center ">Delicious</p>
                     <h2 className='text-center text-yellow-400 font-bold text-3xl p-2 my-2 '>Get in touch</h2>
                     <p className="text-center">Find our location near you and discover our delicious peanut products.</p>
                 </div>
                 <div className="p-10 mr-8">
-                    <Link className=' mb-5 text-lg text-center flex flex-row justify-start items-center hover:text-yellow-500 gap-2 ' to='www.facebook.com'>
+                    <Link className=' mb-5 text-xl text-center flex flex-row justify-start items-center hover:text-yellow-500 gap-2 ' to='www.facebook.com'>
                         <FaFacebookSquare
                         />
                         Facebook</Link>
 
-                    <Link className='mb-5 text-lg text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.instagram.com">
+                    <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.instagram.com">
                         <FaInstagram />
                         Instagram</Link>
 
-                    <Link className='mb-5 text-lg text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.x.com"> <BsTwitterX
+                    <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.x.com"> <BsTwitterX
                         className="texl-4xl"
                     />
                         X</Link>
-                    <Link className='mb-5 text-lg text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.snapchat.com">
+                    <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.snapchat.com">
                         <FaSnapchatSquare
                         />Snapchat</Link>
-                    <Link className='text-lg text-center flex flex-row justify-start items-center hover:text-yellow-400 gap-2 ' to="www.tiktok.com">
+                    <Link className='text-xl text-center flex flex-row justify-start items-center hover:text-yellow-400 gap-2 ' to="www.tiktok.com">
                         <FaTiktok
-                            className="hover:text-yellow-500"
+                            className=" hover:text-yellow-500"
                         />
                         Tiktok</Link>
                 </div>

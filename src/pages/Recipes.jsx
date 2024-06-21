@@ -25,12 +25,20 @@ const Recipes = () => {
     return (
         <div className="w-full p-3 ">
             <h2 className="text-center text-3xl text-yellow-400 font-bold p-2 mb-9">Experience recipes from Fralon Products</h2>
+            <div className="flex justify-between my-4">
+                <button onClick={handlePreviousRecipe} disabled={isFirstRecipe} className={`bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded ${isFirstRecipe ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                    Previous Recipe
+                </button>
+                <button onClick={handleNextRecipe} disabled={isLastRecipe} className={`bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded ${isLastRecipe ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                    Next Recipe
+                </button>
+            </div>
             <div className="flex w-[100%] flex-col justify-center md:flex-row">
                 <div className="w-[100%] md:w-1/2 mb-4 md:mb-0 ">
-                    <img src={recipe.image} alt={recipe.name} className="w-full h-fit rounded-lg" />
+                    <img src={recipe.image} alt={recipe.name} className="w-[100%] h-[400px] md:h-fit rounded-lg" />
                 </div>
-                <div className="w-[100%] md:w-1/2 p-4 bg-white rounded-lg shadow-lg items-center mt-2">
-                    <h1 className="text-3xl text-yellow-400 font-semibold mb-6 mt-5">{recipe.name}</h1>
+                <div className="w-[100%] md:w-1/2 p-3 bg-white rounded-lg shadow-lg items-center">
+                    <h1 className="text-3xl text-yellow-400 font-semibold mb-6">{recipe.name}</h1>
                     <p className="text-lg text-gray-700 mb-6">{recipe.introduction}</p>
 
                     <div>
@@ -78,14 +86,7 @@ const Recipes = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between mt-4">
-                <button onClick={handlePreviousRecipe} disabled={isFirstRecipe} className={`bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded ${isFirstRecipe ? 'opacity-50 cursor-not-allowed' : ''}`}>
-                    Previous Recipe
-                </button>
-                <button onClick={handleNextRecipe} disabled={isLastRecipe} className={`bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded ${isLastRecipe ? 'opacity-50 cursor-not-allowed' : ''}`}>
-                    Next Recipe
-                </button>
-            </div>
+
         </div>
     );
 };

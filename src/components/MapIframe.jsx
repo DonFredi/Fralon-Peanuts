@@ -5,7 +5,7 @@ const MapIframe = () => {
 
     return (
         <div style={{ width: '100%', height: '400px' }}
-            className='mb-[150px]'
+            className='mb-[150px] mt-[60px]'
         >
             <img
                 title="Google Map"

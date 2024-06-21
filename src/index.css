@@ -24,9 +24,9 @@ body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
 
 }
 
@@ -43,8 +43,9 @@ body {
     overflow-x: hidden;
 }
 
-#logo {
-    font-family: fantasy;
+#header {
+
+    font-family: "Playwrite NZ", cursive;
     line-height: 1.3rem;
 }
 
@@ -61,27 +62,59 @@ body {
     border-bottom: 2px solid yellow;
 }
 
-/* Sidebar */
-#sidebar {
-    position: fixed;
-    top: 0;
-    width: 50%;
-    /* Occupies 50% of the page width */
-    height: 100vh;
-    /* Full height of the viewport */
-    background-color: #f0f0f0;
-    z-index: 1000;
-    overflow-x: hidden;
-    transition: transform 0.9s ease;
-    /* Smooth transition animation for both opening and closing */
-    transform: translateX(-100%);
-    /* Initially off-screen */
+/* Keyframes for bounce-in effect */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(30%);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-#sidebar.open {
-    transform: translateX(0);
-    /* Moves the sidebar to the left to show */
+/* Keyframes for bounce-out effect */
+@keyframes bounceOut {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateY(40%);
+    }
+
+    40% {
+        transform: translateY(-40%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
 }
+
+
+/* Applying bounce animations to sidebar */
+.animate-bounceIn {
+    animation: bounceIn 0.7s both;
+}
+
+.animate-bounceOut {
+    animation: bounceOut 0.7s both;
+}
+
 
 
 @media screen and (max-width :801px) {

@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer, useState } from 'react';
+import React, { createContext, useEffect, useReducer } from 'react';
 import product1 from '../assets/bread.jpg';
 import product2 from '../assets/butter.jpg';
 import product3 from '../assets/roasted.jpg';
@@ -28,7 +28,12 @@ const initialState = {
                 weight: '1.5Kg',
                 price: 1200
             },
-            details: "Introducing our generous 1.5 Kg jar of pure peanut butter perfection! Crafted for those who simply can't get enough of the rich, creamy goodness of peanut butter. Whether you're a family of peanut butter enthusiasts or looking to stock up for the long haul, this jumbo-sized jar ensures you never run out of your favorite spread."
+            details: [
+                "Indulge in our largest jar yet – the 1.5 Kg Peanut Butter, crafted for those who crave an abundance of creamy, nutty goodness.",
+                "Perfect for families or avid peanut butter lovers, this jumbo-sized jar ensures you never run out of your favorite spread.",
+                "Whether you're spreading it generously on toast, blending it into smoothies, or using it as a versatile ingredient in cooking and baking, our 1.5 Kg Peanut Butter delivers unmatched taste and satisfaction.",
+                "Made from the finest quality peanuts, it's a wholesome choice for your everyday snacking and meal needs."
+            ]
         },
         {
             id: 1,
@@ -38,7 +43,12 @@ const initialState = {
                 weight: '800g',
                 price: 600
             },
-            details: "Discover the perfect balance of flavor and convenience with our 800g jar of smooth peanut butter bliss. Ideal for those who enjoy peanut butter regularly, this medium-sized jar offers ample supply without compromising on freshness or taste."
+            details: [
+                "Experience the perfect balance of flavor and convenience with our 800g jar of smooth Peanut Butter.",
+                "Ideal for regular peanut butter enthusiasts, this medium-sized jar offers ample supply without compromising on freshness or taste.",
+                "Enjoy the rich, creamy texture of pure peanuts in every spoonful, whether you're spreading it on toast, using it as a dip for fruits and vegetables, or incorporating it into your favorite recipes.",
+                "Packed with protein and essential nutrients, our 800g Peanut Butter is your go-to choice for nutritious and delicious snacking."
+            ]
         },
         {
             id: 2,
@@ -48,7 +58,12 @@ const initialState = {
                 weight: '400g',
                 price: 300
             },
-            details: "Elevate your snacking experience with our compact yet mighty 400g jar of delectable peanut butter goodness. Perfectly sized for singles, couples, or anyone craving a taste of pure delight, this jar packs a punch of flavor in every spoonful. Whether you're fueling up for the day or satisfying a midnight craving, this jar is your go-to source for peanut perfection."
+            details: [
+                "Elevate your snacking experience with our compact yet mighty 400g jar of delectable Peanut Butter.",
+                "Perfectly sized for singles, couples, or anyone craving a taste of pure delight, this jar packs a punch of flavor in every spoonful.",
+                "Made from high-quality peanuts, our 400g Peanut Butter is a versatile addition to your pantry – whether you're spreading it on crackers, mixing it into smoothies, or adding it to your favorite dessert recipes.",
+                "With its creamy texture and irresistible taste, it's the perfect choice for satisfying cravings and enjoying a guilt-free treat."
+            ]
         },
         {
             id: 3,
@@ -58,7 +73,12 @@ const initialState = {
                 weight: '250g',
                 price: 150
             },
-            details: "Experience peanut butter perfection in a petite package with our 250g jar of creamy delight. Designed for those who appreciate quality in small doses, this jar is the epitome of convenience without compromise. Whether you're topping your morning oatmeal, stirring into yogurt, or simply enjoying it by the spoonful, this jar ensures you can enjoy the wholesome goodness of peanut butter wherever you go."
+            details: [
+                "Discover peanut butter perfection in a petite package with our 250g jar of creamy delight.",
+                "Designed for those who appreciate quality in small doses, this jar is the epitome of convenience without compromise.",
+                "Enjoy the rich, nutty flavor of pure peanuts, whether you're spreading it on toast, drizzling it over pancakes, or using it as a dip for fruits and vegetables.",
+                "With its smooth texture and irresistible taste, our 250g Peanut Butter is an essential pantry staple for busy mornings, quick snacks, and moments of pure indulgence."
+            ]
         }
     ],
     recipes: [
@@ -330,6 +350,10 @@ const reducer = (state, action) => {
         case 'removecart':
             const { itemId } = action.payload;
             return { ...state, cartItems: state.cartItems.filter(item => item.id !== itemId) };
+
+        case 'initializeCart':
+            return { ...state, cartItems: action.payload };
+
         default:
             throw new Error(`Could not handle the action type: ${action.type}`);
     }
@@ -362,19 +386,19 @@ export const DataProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const { width } = useWindowSize();
 
+    // Save cart items to localStorage whenever they change
+    useEffect(() => {
+        localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
+    }, [state.cartItems]);
 
     useEffect(() => {
         // Retrieve cart items from localStorage
         const storedCartItems = localStorage.getItem('cartItems');
         if (storedCartItems) {
-            dispatch({ type: 'addcart', payload: JSON.parse(storedCartItems) });
+            dispatch({ type: 'initializeCart', payload: JSON.parse(storedCartItems) });
         }
     }, []);
 
-    // Save cart items to localStorage whenever they change
-    useEffect(() => {
-        localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
-    }, [state.cartItems]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -388,7 +412,8 @@ export const DataProvider = ({ children }) => {
 
     const handleCart = (productId) => {
         dispatch({ type: 'addcart', payload: { productId } });
-        alert('Item added to cart');
+        alert('Add Item to cart');
+        console.log(state.cartItems)
         EventBus.emit('cartCountUpdated');
     };
 
