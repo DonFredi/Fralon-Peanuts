@@ -28,16 +28,16 @@ const Header = () => {
         <div>
             <header className='bg-white-300 w-[100%] flex justify-between px-2 py-8 items-center h-[100px]'>
 
-                {width < 760 ?
+                {width < 860 ?
                     <div className='flex flex-row justify-between  w-[100%]'>
 
 
-                        <div className='flex justify-center items-center'>
+                        <div className='flex justify-between items-center'>
                             <p
                                 id='header'
                                 className='text-3xl text-yellow-400'><span className='text-extrabold'>Fralon</span>Peanuts</p>
                         </div>
-                        <div></div>
+
                         <RxHamburgerMenu
 
                             onClick={handleHamBtn}
@@ -45,7 +45,7 @@ const Header = () => {
                         />
                     </div>
                     :
-                    <div className='flex justify-between gap-x-[400px] items-center flex-row'>
+                    <div className='flex justify-between w-[100%]  items-center flex-row'>
 
 
                         <p
@@ -54,28 +54,28 @@ const Header = () => {
 
 
 
-                        <nav className='flex justify-end flex-row w-[100%] text-xl'>
+                        <nav className='flex justify-between flex-row items-center text-xl'>
                             <Link to="/"
 
                                 className='flex-1 text-blue-900 font-semibold  w-100% px-3 border-b-4 border-transparent hover:text-yellow-500 '>Home</Link>
                             <Link to="products" className='flex-1 text-blue-900 font-semibold w-100% px-3 border-b-4 border-transparent hover:text-yellow-500 '>Products</Link>
                             <Link to="recipes" className='flex-1 text-blue-900  font-semibold w-100% px-3 border-b-4 border-transparent hover:text-yellow-500 '>Recipes</Link>
                             <Link to="contact" className='flex-1 text-blue-900 font-semibold w-100% px-3 border-b-4 border-transparent hover:text-yellow-500 '>Contacts</Link>
+                            <div className="relative mr-3">
+                                <Link to="cart" className='block'>
 
+                                    <GiShoppingCart
+                                        className='text-5xl text-black cursor-pointer hover:text-yellow-500'
+
+                                    />
+
+                                    <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full px-2 py-1 text-xs">{state.cartItems.length}</span>
+                                </Link>
+
+
+                            </div>
                         </nav>
-                        <div className="relative mr-3">
-                            <Link to="cart" className='block'>
 
-                                <GiShoppingCart
-                                    className='text-5xl text-black cursor-pointer hover:text-yellow-500'
-
-                                />
-
-                                <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full px-2 py-1 text-xs">{state.cartItems.length}</span>
-                            </Link>
-
-
-                        </div>
 
                     </div>
                 }
@@ -88,10 +88,10 @@ const Header = () => {
             {sidebar && (
                 <div
                     id={`sidebar ${sidebar ? 'open' : ''}`}
-                    className={`fixed flex justify-between flex-col p-2 top-0 h-[70%] w-full bg-gray-200 z-50 overflow-hidden transform ${sidebar ? 'animate-bounceIn' : 'animate-bounceOut'}`}
+                    className={`fixed flex justify-start p-3 flex-col top-0 h-[65%] w-full bg-gray-200 overflow-hidden transform ${sidebar ? 'animate-bounceIn' : 'animate-bounceOut'}`}
                 >
 
-                    <div className='top-[10px] py-7 px-5  flex justify-between flex-row items-center'>
+                    <div className='top-[10px] py-3 mt-2 px-5  flex justify-between flex-row items-center'>
                         <p
                             id='header'
                             className='text-4xl text-yellow-500'><span className='text-extrabold'>Fralon</span>Peanuts</p>
@@ -101,8 +101,8 @@ const Header = () => {
                         />
                     </div>
 
-                    <div className='flex justify-center flex-col gap-10'>
-                        <Link to="cart" className='block p-2'>
+                    <div className='flex justify-center flex-col gap-6'>
+                        <Link to="cart" className='block'>
 
                             <GiShoppingCart
                                 className='text-5xl text-black cursor-pointer hover:text-yellow-500'
@@ -111,16 +111,16 @@ const Header = () => {
                         </Link>
                         <Link to="/"
                             onClick={handleHamBtn}
-                            className='block text-blue-900 font-bold w-100% px-2 text-center py-3 hover:bg-yellow-400 '>Home</Link>
+                            className='block text-blue-900 font-bold w-100% p-2 text-center hover:bg-yellow-400 '>Home</Link>
                         <Link to="products"
                             onClick={handleHamBtn}
-                            className='block text-blue-900 font-bold w-100% px-2 text-center py-3  hover:bg-yellow-400 '>Products</Link>
+                            className='block text-blue-900 font-bold w-100% p-2 text-center  hover:bg-yellow-400 '>Products</Link>
                         <Link to="recipes"
                             onClick={handleHamBtn}
-                            className='block text-blue-900 font-bold w-100% px-2 text-center py-3 hover:bg-yellow-400 '>Recipes</Link>
+                            className='block text-blue-900 font-bold w-100% p-2 text-center hover:bg-yellow-400 '>Recipes</Link>
                         <Link to="contact"
                             onClick={handleHamBtn}
-                            className='block text-blue-900 font-bold w-100% px-2 text-center py-3  hover:bg-yellow-400 '>Contacts</Link>
+                            className='block text-blue-900 font-bold w-100% p-2 text-center   hover:bg-yellow-400 '>Contacts</Link>
 
                     </div>
 

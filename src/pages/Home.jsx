@@ -104,14 +104,14 @@ const About = () => {
             </section>
             <div
                 id="testimonials"
-                className="py-6 px-3 mx-4 mt-[130px] flex justify-start flex-col gap-x-6  md:flex-row">
+                className="py-6 mx-4 mt-[130px] flex justify-center items-center flex-col md:flex-row">
                 <div className="h-[50%] w-full">
                     <img src={Client2} alt="placeholder"
-                        className="w-[100%] h-full"
+                        className="w-[60%] h-full"
                     />
                 </div>
 
-                <div className="flex justify-center flex-col gap-y-5 p-7 md:justify-center">
+                <div className="flex justify-center flex-col gap-y-5 md:justify-center">
                     <div className="flex justify-start flex-row gap-x-2 text-3xl text-yellow-400">
                         <FaStar />
                         <FaStar />

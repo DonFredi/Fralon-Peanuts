@@ -32,6 +32,7 @@ function App() {
     setIsAuthenticated(true);
   };
   const router = createBrowserRouter(
+    { basename: '/fralon-peanuts' },
     createRoutesFromElements(
 
       <Route path="/" element={<RootLayout />}>

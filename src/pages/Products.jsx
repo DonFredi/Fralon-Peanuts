@@ -13,6 +13,7 @@ import { FaArrowLeft } from "react-icons/fa6";
 const Products = () => {
     const [index, setIndex] = useState(0);
     const [type, setType] = useState(null);
+    const [animationClass, setAnimationClass] = useState('');
     const { state } = useContext(DataContext);
 
     const smooth = { smooth: 'Smooth peanut butter for all' }
@@ -36,6 +37,8 @@ const Products = () => {
     }
 
     const handlePrevious = () => {
+
+
         setIndex((prevIndex) =>
             prevIndex === 0 ? state.recipes.length - 1 : prevIndex - 1
         );
@@ -140,7 +143,7 @@ const Products = () => {
 
                 <p className='text-center'>Discover our wide range of peanut products, including raw peanuts, roasted peanuts, and peanut butter.</p>
 
-                <div className=' w-[100%] flex justify-around items-center flex-row gap-x-4 mt-9 flex-wrap'>
+                <div className=' w-[100%] flex justify-around items-center md:flex-row flex-col gap-x-4 mt-9 flex-wrap'>
 
                     {state.products.map((item) => (
                         <Link

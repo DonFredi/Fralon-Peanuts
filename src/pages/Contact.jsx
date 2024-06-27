@@ -50,11 +50,11 @@ const Contact = () => {
                             className="text-2xl my-2"
                         />
                         <p>Nairobi, Kenya</p>
-                        <p>Get Directions </p>
+                        <Link className="underline hover:no-underline"> Get Directions </Link>
                     </div>
                     <div className="mt-5 flex items-center p-3">
                         <img src={Customer} alt="customer service agents"
-                            className="w-[600px] h-fit"
+                            className="w-[600px] h-fit rounded-3xl"
                         />
                     </div>
 
@@ -73,35 +73,45 @@ const Contact = () => {
 
             </section>
 
-            <section className='flex  justify-evenly  gap-x-9 flex-col items-center mt-[50px]'>
-                <div className="flex justify-start p-3 flex-col">
+            <section className='flex  justify-evenly flex-col items-center mt-[50px] p-2'>
+                <div>
                     <p className="text-center ">Delicious</p>
-                    <h2 className='text-center text-yellow-400 font-bold text-3xl p-2 my-2 '>Get in touch</h2>
-                    <p className="text-center">Find our location near you and discover our delicious peanut products.</p>
+                    <h2 className='text-center text-yellow-400 font-bold text-3xl p-2 my-4'>Get in touch</h2>
+                    <p className="text-center my-3 ">Find our location near you and discover our delicious peanut products.</p>
                 </div>
-                <div className="p-10 mr-8">
-                    <Link className=' mb-5 text-xl text-center flex flex-row justify-start items-center hover:text-yellow-500 gap-2 ' to='www.facebook.com'>
-                        <FaFacebookSquare
-                        />
-                        Facebook</Link>
+                <div className="flex md:flex-row flex-col md:justify-around w-[100%] items-center border-yellow-400 border-[3px] rounded-lg">
+                    <div className="flex flex-col p-4 justify-start">
+                        <h3 className="text-center mb-5 text-2xl">Business Hours :</h3>
+                        <p className="mb-5 text-xl">Monday - Friday: 8am - 7:30pm</p>
+                        <p className="mb-5 text-xl">Saturday : 8:30am - 7:30pm</p>
+                        <p className="mb-5 text-xl">Sunday - Closed</p>
+                    </div>
+                    <div className="p-4 flex flex-col justify-start">
+                        <h3 className="text-center mb-5 text-2xl">Socials : </h3>
+                        <Link className=' mb-5 text-xl text-center flex flex-row justify-start items-center hover:text-yellow-500 gap-2 ' to='www.facebook.com'>
+                            <FaFacebookSquare
+                            />
+                            Facebook</Link>
 
-                    <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.instagram.com">
-                        <FaInstagram />
-                        Instagram</Link>
+                        <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.instagram.com">
+                            <FaInstagram />
+                            Instagram</Link>
 
-                    <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.x.com"> <BsTwitterX
-                        className="texl-4xl"
-                    />
-                        X</Link>
-                    <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.snapchat.com">
-                        <FaSnapchatSquare
-                        />Snapchat</Link>
-                    <Link className='text-xl text-center flex flex-row justify-start items-center hover:text-yellow-400 gap-2 ' to="www.tiktok.com">
-                        <FaTiktok
-                            className=" hover:text-yellow-500"
+                        <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.x.com"> <BsTwitterX
+                            className="texl-4xl"
                         />
-                        Tiktok</Link>
+                            X</Link>
+                        <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.snapchat.com">
+                            <FaSnapchatSquare
+                            />Snapchat</Link>
+                        <Link className='text-xl text-center flex flex-row justify-start items-center hover:text-yellow-400 gap-2 ' to="www.tiktok.com">
+                            <FaTiktok
+                                className=" hover:text-yellow-500"
+                            />
+                            Tiktok</Link>
+                    </div>
                 </div>
+
             </section>
 
             <MapIframe />
