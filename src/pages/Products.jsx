@@ -13,7 +13,6 @@ import { FaArrowLeft } from "react-icons/fa6";
 const Products = () => {
     const [index, setIndex] = useState(0);
     const [type, setType] = useState(null);
-    const [animationClass, setAnimationClass] = useState('');
     const { state } = useContext(DataContext);
 
     const smooth = { smooth: 'Smooth peanut butter for all' }
@@ -164,7 +163,7 @@ const Products = () => {
                 </div>
 
             </section>
-            <section className='mt-[100px] flex justify-start items-center flex-col gap-x-5 p-6'>
+            <section className='mt-[70px] flex justify-start items-center flex-col gap-x-5 p-6'>
                 <div className='text-center py-4'>
                     <h3 className='text-center py-3'>Nutritious</h3>
                     <h2 className='text-3xl font-bold text-yellow-400 mb-4 text-center py-3'>Discover the Nutritional Benefits of Peanuts</h2>
@@ -209,7 +208,7 @@ const Products = () => {
 
                 </div>
                 <img src={Place} alt="place holder"
-                    className='px-4'
+                    className='p-4 h-[400px] w-[100%]'
                 />
             </section>
             <article className='flex flex-col p-6 mt-[100px] items-center gap-y-5'>

@@ -88,7 +88,7 @@ const Header = () => {
             {sidebar && (
                 <div
                     id={`sidebar ${sidebar ? 'open' : ''}`}
-                    className={`fixed flex justify-start p-3 flex-col top-0 h-[65%] w-full bg-gray-200 overflow-hidden transform ${sidebar ? 'animate-bounceIn' : 'animate-bounceOut'}`}
+                    className={`fixed  z-50 flex justify-start p-3 flex-col top-0 h-[65%] w-full bg-gray-200 bg-opacity-100 overflow-hidden transform ${sidebar ? 'animate-bounceIn' : 'animate-bounceOut'}`}
                 >
 
                     <div className='top-[10px] py-3 mt-2 px-5  flex justify-between flex-row items-center'>

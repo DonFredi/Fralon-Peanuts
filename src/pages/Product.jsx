@@ -15,7 +15,7 @@ const Product = () => {
     return (
         <div className='flex flex-col justify-start mb-[200px] p-6'>
             <Link
-                className=' bg-blue-600 w-[50px] p-3  hover:bg-blue-500 text-white'
+                className=' bg-blue-600 w-[60px] p-3  hover:bg-blue-500 text-white rounded-3xl'
                 to='/products'> <IoArrowBackOutline /> </Link>
 
             <div className='flex flex-col justify-evenly md:flex-row  px-6'>

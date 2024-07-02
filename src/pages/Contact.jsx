@@ -85,7 +85,9 @@ const Contact = () => {
                         <p className="mb-5 text-xl">Monday - Friday: 8am - 7:30pm</p>
                         <p className="mb-5 text-xl">Saturday : 8:30am - 7:30pm</p>
                         <p className="mb-5 text-xl">Sunday - Closed</p>
+
                     </div>
+
                     <div className="p-4 flex flex-col justify-start">
                         <h3 className="text-center mb-5 text-2xl">Socials : </h3>
                         <Link className=' mb-5 text-xl text-center flex flex-row justify-start items-center hover:text-yellow-500 gap-2 ' to='www.facebook.com'>

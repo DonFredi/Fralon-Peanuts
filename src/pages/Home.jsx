@@ -21,12 +21,10 @@ const About = () => {
                     <div className="flex justify-center items-center flex-col px-8 md:justify-start">
                         <p className=" mb-6 text-center">Our peanuts are carefully selected, roasted to perfection, and packed with nutrients.Whether you're looking for a healthy snack or versatile ingredient, Fralon Peanuts has you covered.</p>
 
-                        <div className="flex flex-row gap-x-6 justify-center">
+                        <Link to="cart"
+                            className="p-3 text-center rounded-3xl font-bold bg-blue-500 hover:bg-blue-600 text-white ">Shop Now</Link>
 
-                            <Link to="cart"
-                                className="p-3 text-center text-xl font-bold bg-blue-500 hover:bg-blue-600 text-white ">Shop Now</Link>
 
-                        </div>
                     </div>
                 </div>
             </div>
@@ -40,10 +38,10 @@ const About = () => {
 
             <article
                 id="article"
-                className="flex justify-evenly flex-row py-6 px-2 my-5">
+                className="flex justify-evenly flex-row py-6 my-5">
                 <div className="flex justify-start flex-col p-5 items-center w-[100%]">
                     <h2 className="text-center text-3xl font-bold text-yellow-400 my-9 flex-nowrap">Discover the Delicious Variety  of Peanut Products at Fralon Peanuts</h2>
-                    <p className="text-left ">At Fralon Peanuts, we offer a wide range of peanut products, including peanut butter, roasted peanuts, and ground peanuts. Our products are made with the highest quality peanuts and are packed with flavor and nutrition. Whether you're looking for a tasty snack or a versatile ingredient for your recipes, we have the perfect peanut product for you.</p>
+                    <p>At Fralon Peanuts, we offer a wide range of peanut products, including peanut butter, roasted peanuts, and ground peanuts. Our products are made with the highest quality peanuts and are packed with flavor and nutrition. Whether you're looking for a tasty snack or a versatile ingredient for your recipes, we have the perfect peanut product for you.</p>
 
                 </div>
                 <div className="flex justify-center items-center w-[100%] p-6">
@@ -112,7 +110,7 @@ const About = () => {
                 </div>
 
                 <div className="flex justify-center flex-col gap-y-5 md:justify-center">
-                    <div className="flex justify-start flex-row gap-x-2 text-3xl text-yellow-400">
+                    <div className="flex justify-start flex-row gap-x-2 text-3xl text-yellow-400 mt-4">
                         <FaStar />
                         <FaStar />
                         <FaStar />
