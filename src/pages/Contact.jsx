@@ -45,7 +45,7 @@ const Contact = () => {
                         <p>Give us a call</p>
                         <p>0702106704</p>
 
-                        <h3 className="text-lg font-semibold mt-3">Office</h3>
+                        <h3 className="text-lg font-semibold mt-3">Location</h3>
                         <CiLocationOn
                             className="text-2xl my-2"
                         />
@@ -124,72 +124,48 @@ const Contact = () => {
                 <h2 className="text-3xl font-bold text-yellow-400">Our amazing team</h2>
                 <p>Meet the talented individuals behind Fralon Peanuts.</p>
 
-                <div className="flex flex-wrap justify-between p-4">
-                    <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
-                        <div className="bg-white rounded-lg p-4 text-center">
-                            <img src={Client1} alt="clients" className="w-full mb-2 rounded-md h-fit" />
+                <div className="flex md:flex-row flex-col p-8">
+                    <div>
+
+                        <img src={Client1} alt="clients" className="w-[68px] h-[68px] mb-2 rounded-full" />
+                        <div className="flex flex-col">
                             <p>Eugene O.</p>
                             <p>Designer</p>
                             <p>John is the visionary leader behind Fralon Peanuts, driving innovation and growth.</p>
-                            <div
-                                className="flex flex-row justify-center gap-x-4 p-3 text-xl"
-                            >
-                                <BsTwitterX />
-                                <FaInstagram />
-                                <FaFacebookSquare />
 
-                            </div>
                         </div>
                     </div>
 
-                    <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 text-center">
-                        <div className="bg-white rounded-lg p-4 text-center">
-                            <img src={Client1} alt="clients" className="w-full mb-2 rounded-md" />
+                    <div>
+
+                        <img src={Client1} alt="clients" className="w-[68px] h-[68px] mb-2 rounded-full" />
+                        <div>
                             <p>Brenda K.</p>
                             <p>Co Founder</p>
                             <p>Jane is passionate about technology and leads our technical team with precision.</p>
-                            <div
-                                className="flex flex-row justify-center gap-x-4 p-3 text-xl"
-                            >
-                                <BsTwitterX />
-                                <FaInstagram />
-                                <FaFacebookSquare />
 
-                            </div>
                         </div>
                     </div>
 
-                    <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
-                        <div className="bg-white rounded-lg p-4 text-center">
-                            <img src={Client1} alt="clients" className="w-full mb-2 rounded-md" />
+                    <div>
+
+                        <img src={Client1} alt="clients" className="w-[68px] h-[68px] mb-2 rounded-full" />
+                        <div>
                             <p>Michelle A.</p>
                             <p>Marketing Director</p>
                             <p>Michael is dedicated to creating impactful marketing campaigns that resonate with clients.</p>
-                            <div
-                                className="flex flex-row justify-center gap-x-4 p-3 text-xl"
-                            >
-                                <BsTwitterX />
-                                <FaInstagram />
-                                <FaFacebookSquare />
 
-                            </div>
                         </div>
                     </div>
 
-                    <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 text-center">
-                        <div className="bg-white rounded-lg p-4 text-center">
-                            <img src={Client1} alt="clients" className="w-full mb-2 rounded-md" />
+                    <div>
+
+                        <img src={Client1} alt="clients" className="w-[68px] h-[68px] mb-2 rounded-full" />
+                        <div>
                             <p>Emily J.</p>
                             <p>Design Lead</p>
                             <p>Emily brings creativity and innovation to every design project, ensuring our brand stands out.</p>
-                            <div
-                                className="flex flex-row justify-center gap-x-4 p-3 text-xl"
-                            >
-                                <BsTwitterX />
-                                <FaInstagram />
-                                <FaFacebookSquare />
 
-                            </div>
                         </div>
                     </div>
 

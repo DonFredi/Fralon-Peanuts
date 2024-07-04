@@ -52,8 +52,8 @@ const Form = () => {
                         type="text"
                         id="name"
                         name="name"
-                        {...register("username", {
-                            required: "Username is required",
+                        {...register("name", {
+                            required: "Name is required",
                         })}
                         placeholder='Your name...'
                         className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"

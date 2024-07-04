@@ -15,9 +15,17 @@ const Products = () => {
     const [type, setType] = useState(null);
     const { state } = useContext(DataContext);
 
-    const smooth = { smooth: 'Smooth peanut butter for all' }
-    const crunchy = { crunchy: 'Crunchy peanut butter for you' }
-    const organic = { organic: 'This is the organic peanut butter' }
+    const smooth = {
+        smooth: 'Smooth peanut butter for all. This type of peanut butter is known for its creamy texture and easy spreadability. It’s perfect for those who enjoy a consistent, smooth taste in their sandwiches, baking recipes, or smoothies. Made with high-quality peanuts, it provides a rich and satisfying flavor that complements a variety of dishes.'
+    };
+
+    const crunchy = {
+        crunchy: 'Crunchy peanut butter for you. Ideal for those who love a bit of texture, this peanut butter is packed with crunchy peanut pieces that add a delightful crunch to every bite. It’s great for adding an extra layer of texture to your snacks, whether you are spreading it on toast, using it as a dip for fruits and vegetables, or incorporating it into your favorite recipes.'
+    };
+
+    const organic = {
+        organic: 'This is the organic peanut butter. Made from organically grown peanuts, this peanut butter is free from artificial additives and preservatives. It offers a pure, natural taste that is perfect for health-conscious consumers. With its wholesome ingredients, organic peanut butter provides a rich, nutty flavor that is both delicious and nutritious, making it an excellent choice for a healthy lifestyle.'
+    };
 
 
     const handleSmooth = () => {
@@ -141,27 +149,27 @@ const Products = () => {
                 <h2 className='py-3 text-3xl text-yellow-400 font-bold font-serif text-center mb-2'>Products</h2>
 
                 <p className='text-center'>Discover our wide range of peanut products, including raw peanuts, roasted peanuts, and peanut butter.</p>
+                <div className="div scroll-container">
+                    <div className='products-wrapper w-[100%] flex justify-around items-center md:flex-row flex-col gap-x-4 mt-9 flex-wrap'>
 
-                <div className=' w-[100%] flex justify-around items-center md:flex-row flex-col gap-x-4 mt-9 flex-wrap'>
-
-                    {state.products.map((item) => (
-                        <Link
-                            to={`/product/${item.id}`}
-                            className='flex items-center justify-start flex-col text-center py-6 mt-6 px-7 gap-y-3 hover:bg-yellow-400 rounded-lg' >
-                            <img
-                                className='w-fit h-[200px]'
-                                src={item.src} alt={item.title.details} />
-                            <p className='text-lg font-semibold'>{item.title.item}</p>
-                            <p className='text-lg font-semibold'>Price: {item.title.price} Kshs</p>
-                        </Link>
-
-
-                    ))}
+                        {state.products.map((item) => (
+                            <Link
+                                to={`/product/${item.id}`}
+                                className='flex items-center justify-start flex-col text-center py-6 mt-6 px-7 gap-y-3 hover:bg-yellow-400 rounded-lg' >
+                                <img
+                                    className='w-fit h-[200px]'
+                                    src={item.src} alt={item.title.details} />
+                                <p className='text-lg font-semibold'>{item.title.item}</p>
+                                <p className='text-lg font-semibold'>Price: {item.title.price} Kshs</p>
+                            </Link>
 
 
+                        ))}
 
+
+
+                    </div>
                 </div>
-
             </section>
             <section className='mt-[70px] flex justify-start items-center flex-col gap-x-5 p-6'>
                 <div className='text-center py-4'>
@@ -169,7 +177,9 @@ const Products = () => {
                     <h2 className='text-3xl font-bold text-yellow-400 mb-4 text-center py-3'>Discover the Nutritional Benefits of Peanuts</h2>
                     <p>Peanuts and peanut products are packed with essential nutrients and offer numerous health benefits. They are a great source of protein, fiber, healthy fats, and vitamins, making them a nutritious addition to your diet.</p>
                     <div className='mt-3 flex flex-row justify-center'>
-                        <Link className="p-2 bg-slate-100 border-black border-2 hover:bg-slate-200">Learn More</Link>
+                        <Link
+                            to="/benefits"
+                            className="p-2 bg-slate-100 border-black border-2 hover:bg-slate-200">Learn More</Link>
                         <Link
                             to="/cart"
                             className='p-3 hover:underline'>Shop Now</Link>

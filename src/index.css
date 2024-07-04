@@ -62,6 +62,31 @@ body {
     border-bottom: 2px solid yellow;
 }
 
+.scroll-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    /* Adjust based on your needs */
+}
+
+.products-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* Ensure the flex items don't wrap */
+    flex-wrap: nowrap;
+}
+
+/* Optional: Style the scrollbar */
+.scroll-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+}
+
 /* Keyframes for bounce-in effect */
 @keyframes bounceIn {
     0% {
