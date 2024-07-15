@@ -5,13 +5,7 @@ const Form = () => {
         register,
         handleSubmit,
         formState: { errors, isSubmitting },
-    } = useForm({
-        defaultValues: {
-            username: "Your username..",
-            email: "123@email.com",
-            message: "Type your message..",
-        }
-    });
+    } = useForm();
 
 
     const onSubmit = async (data, e) => {
@@ -22,6 +16,7 @@ const Form = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ data }),
+                credentials: 'include'
             });
             if (response.error) {
                 console.log(response.error)
@@ -38,7 +33,7 @@ const Form = () => {
     }
 
     return (
-        <div className='w-[100%] bg-yellow-400 flex items-center justify-center p-6 hover:bg-yellow-300'>
+        <div className='w-[100%] md:w-[50%] mt-6 flex items-center justify-center p-6'>
             <form
                 action="#"
                 method="POST"

@@ -24,9 +24,20 @@ body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    font-size: 17px;
+    font-size: 18px;
     font-family: "Poppins", sans-serif;
     font-style: normal;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 
 }
 
@@ -41,6 +52,21 @@ body {
     height: 100vh;
     width: 100%;
     overflow-x: hidden;
+}
+
+.loader {
+    border-top-color: #3490dc;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #header {
@@ -83,7 +109,7 @@ body {
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: rgb(234, 179, 8);
     border-radius: 5px;
 }
 

@@ -9,8 +9,6 @@ import { CiMail } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
 import { CiLocationOn } from "react-icons/ci"
 import { Link } from 'react-router-dom';
-
-import Customer from '../assets/agent.jpg';
 import Client1 from '../assets/client1.jpg';
 import MapIframe from "../components/MapIframe";
 
@@ -28,8 +26,8 @@ const Contact = () => {
                 <h2 className="text-3xl font-bold text-yellow-400 text-center py-3 mb-4">Contact Information</h2>
                 <p className="text-center">We'd love to hear from you. Reach out to us using any of the methods below.</p>
 
-                <div className="flex justify-between flex-col p-4 md:flex-row  mt-8 items-center">
-                    <div className="flex justify-start flex-col">
+                <div className="flex justify-evenly w-[100%] flex-col md:flex-row p-3 mt-8">
+                    <div className="flex justify-start flex-col p-3 w-[100%] md:w-[50%] items-center">
 
                         <h3 className="text-lg font-semibold mt-3">Email</h3>
                         <CiMail
@@ -52,11 +50,7 @@ const Contact = () => {
                         <p>Nairobi, Kenya</p>
                         <Link className="underline hover:no-underline"> Get Directions </Link>
                     </div>
-                    <div className="mt-5 flex items-center p-3">
-                        <img src={Customer} alt="customer service agents"
-                            className="w-[600px] h-fit rounded-3xl"
-                        />
-                    </div>
+                    < Form />
 
                 </div>
 
@@ -64,11 +58,6 @@ const Contact = () => {
             </section>
 
             <section className='text-center mb-8 flex justify-start flex-col items-center mt-[70px]'>
-                <p className="text-center">Fresh</p>
-                <h2 className='text-3xl text-yellow-400 font-bold my-2  py-3 text-center'>Get in touch</h2>
-
-                <p className="text-center my-3 p-2">Have a question or need assistance? We're here to help!</p>
-                < Form />
 
 
             </section>
@@ -88,25 +77,25 @@ const Contact = () => {
 
                     </div>
 
-                    <div className="p-4 flex flex-col justify-start">
+                    <div className="p-4 flex flex-col justify-start text-left">
                         <h3 className="text-center mb-5 text-2xl">Socials : </h3>
-                        <Link className=' mb-5 text-xl text-center flex flex-row justify-start items-center hover:text-yellow-500 gap-2 ' to='www.facebook.com'>
+                        <Link className=' mb-5 text-xl flex flex-row justify-start items-center hover:text-yellow-500 gap-2 ' to='www.facebook.com'>
                             <FaFacebookSquare
                             />
                             Facebook</Link>
 
-                        <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.instagram.com">
+                        <Link className='mb-5 text-xl flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.instagram.com">
                             <FaInstagram />
                             Instagram</Link>
 
-                        <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.x.com"> <BsTwitterX
+                        <Link className='mb-5 text-xl flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.x.com"> <BsTwitterX
                             className="texl-4xl"
                         />
                             X</Link>
-                        <Link className='mb-5 text-xl text-center flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.snapchat.com">
+                        <Link className='mb-5 text-xl flex flex-row  justify-start items-center hover:text-yellow-500 gap-2' to="www.snapchat.com">
                             <FaSnapchatSquare
                             />Snapchat</Link>
-                        <Link className='text-xl text-center flex flex-row justify-start items-center hover:text-yellow-400 gap-2 ' to="www.tiktok.com">
+                        <Link className='text-xl flex flex-row justify-start items-center hover:text-yellow-400 gap-2 ' to="www.tiktok.com">
                             <FaTiktok
                                 className=" hover:text-yellow-500"
                             />
@@ -124,8 +113,8 @@ const Contact = () => {
                 <h2 className="text-3xl font-bold text-yellow-400">Our amazing team</h2>
                 <p>Meet the talented individuals behind Fralon Peanuts.</p>
 
-                <div className="flex md:flex-row flex-col p-8">
-                    <div>
+                <div className="flex md:flex-row flex-col p-8 gap-y-5">
+                    <div className="items-center flex flex-col text-center">
 
                         <img src={Client1} alt="clients" className="w-[68px] h-[68px] mb-2 rounded-full" />
                         <div className="flex flex-col">
@@ -136,7 +125,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="items-center flex flex-col text-center">
 
                         <img src={Client1} alt="clients" className="w-[68px] h-[68px] mb-2 rounded-full" />
                         <div>
@@ -147,7 +136,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="items-center flex flex-col text-center">
 
                         <img src={Client1} alt="clients" className="w-[68px] h-[68px] mb-2 rounded-full" />
                         <div>
@@ -158,7 +147,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="items-center flex flex-col text-center">
 
                         <img src={Client1} alt="clients" className="w-[68px] h-[68px] mb-2 rounded-full" />
                         <div>

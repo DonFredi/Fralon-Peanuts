@@ -15,6 +15,11 @@ const Products = () => {
     const [type, setType] = useState(null);
     const { state } = useContext(DataContext);
 
+    if (!state || !state.products) {
+        return <p className='text-center'>No Products Available</p>;
+    }
+
+
     const smooth = {
         smooth: 'Smooth peanut butter for all. This type of peanut butter is known for its creamy texture and easy spreadability. It’s perfect for those who enjoy a consistent, smooth taste in their sandwiches, baking recipes, or smoothies. Made with high-quality peanuts, it provides a rich and satisfying flavor that complements a variety of dishes.'
     };
@@ -50,17 +55,18 @@ const Products = () => {
             prevIndex === 0 ? state.recipes.length - 1 : prevIndex - 1
         );
     }
-
+    if (!state || !state.products || state.products.length === 0) {
+        return null;// Handle loading state or no data scenario
+    }
     const product = state.products[index];
     const isFirstProduct = index === 0;
     const isLastProduct = index === state.products.length - 1;
-
 
     return (
         <div className='p-3'>
             <h2 className="text-center text-3xl text-yellow-400 font-bold my-4">Experience Delicious Fralon Products</h2>
             <article className='flex flex-col items-center justify-start md:flex-row'>
-                <div className='flex flex-col md:w-[50%] w-[100%] '>
+                <div className='flex flex-col w-[100%] md:w-[50%]'>
                     <div className='flex justify-around flex-row items-center border-black border-2 py-6'>
 
                         <button
@@ -91,7 +97,7 @@ const Products = () => {
 
                     <p className='mt-6 p-3 text-center'>( {index + 1} / {state.products.length} )</p>
                 </div>
-                <div className='w-full md:w-1/2 p-6 text-left'>
+                <div className='w-[100%] md:w-[50%] p-6 text-left'>
                     <h1 className='text-left text-yellow-400 font-bold text-2xl p-3'>Fralon Peanut Butter</h1>
 
                     <div className="flex justify-start flex-row gap-x-2 text-3xl text-yellow-400">
@@ -152,8 +158,9 @@ const Products = () => {
                 <div className="div scroll-container">
                     <div className='products-wrapper w-[100%] flex justify-around items-center md:flex-row flex-col gap-x-4 mt-9 flex-wrap'>
 
-                        {state.products.map((item) => (
+                        {state.products.map((item, index) => (
                             <Link
+                                key={index}
                                 to={`/product/${item.id}`}
                                 className='flex items-center justify-start flex-col text-center py-6 mt-6 px-7 gap-y-3 hover:bg-yellow-400 rounded-lg' >
                                 <img

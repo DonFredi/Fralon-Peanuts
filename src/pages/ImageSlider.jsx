@@ -5,7 +5,9 @@ const ImageSlider = () => {
     const { state } = useContext(DataContext)
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-
+    if (!state || !state.images) {
+        return null; // or handle loading state or error here
+    }
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImageIndex(prevIndex =>

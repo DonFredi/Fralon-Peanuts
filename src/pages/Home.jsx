@@ -19,10 +19,10 @@ const About = () => {
 
                     <h2 className='   text-4xl text-yellow-400 font-bold font-serif text-center mb-8'>Delicious Peanuts for every Occassion</h2>
                     <div className="flex justify-center items-center flex-col px-8 md:justify-start">
-                        <p className=" mb-6 text-center">Our peanuts are carefully selected, roasted to perfection, and packed with nutrients.Whether you're looking for a healthy snack or versatile ingredient, Fralon Peanuts has you covered.</p>
+                        Our peanuts are carefully selected, roasted to perfection, and packed with nutrients. Whether you're looking for a healthy snack or a versatile ingredient, Fralon Peanuts has you covered. From savory to sweet, our peanuts cater to every taste. Enjoy them as a quick energy boost, incorporate them into your favorite recipes, or savor them on their own for a satisfying crunch. Rich in protein, fiber, and essential vitamins, our peanuts are not only delicious but also a wholesome choice for your diet. Discover the delightful flavor and nutritional benefits of Fralon Peanuts today, perfect for any occasion!
 
                         <Link to="cart"
-                            className="p-3 text-center rounded-3xl font-bold bg-blue-500 hover:bg-blue-600 text-white ">Shop Now</Link>
+                            className="p-4 mt-9 text-center rounded-lg font-bold bg-blue-500 hover:bg-blue-600 text-white ">Shop Now</Link>
 
 
                     </div>
@@ -39,8 +39,8 @@ const About = () => {
             <article
                 id="article"
                 className="flex justify-evenly flex-row py-6 my-5">
-                <div className="flex justify-start flex-col p-5 items-center w-[100%]">
-                    <h2 className="text-center text-3xl font-bold text-yellow-400 my-9 flex-nowrap">Discover the Delicious Variety  of Peanut Products at Fralon Peanuts</h2>
+                <div className="flex justify-start flex-col items-center w-[100%]">
+                    <h2 className="text-3xl font-bold text-yellow-400 my-9 ">Discover the Delicious Variety  of Peanut Products at Fralon Peanuts</h2>
                     <p>At Fralon Peanuts, we offer a wide range of peanut products, including peanut butter, roasted peanuts, and ground peanuts. Our products are made with the highest quality peanuts and are packed with flavor and nutrition. Whether you're looking for a tasty snack or a versatile ingredient for your recipes, we have the perfect peanut product for you.</p>
 
                 </div>
@@ -109,7 +109,7 @@ const About = () => {
                     />
                 </div>
 
-                <div className="flex justify-center flex-col gap-y-5 md:justify-center">
+                <div className="flex justify-center flex-col gap-y-5 md:justify-center p-[40px]">
                     <div className="flex justify-start flex-row gap-x-2 text-3xl text-yellow-400 mt-4">
                         <FaStar />
                         <FaStar />
@@ -172,7 +172,7 @@ const About = () => {
                 <h3 className="text-center font-semibold">Still have questions?</h3>
                 <p className="text-center">Contact us for further assistance</p>
                 <Link to="contact"
-                    className=" flex justify-center items-center text-center px-4 py-3 bg-blue-500 text-white w-[70px] m-auto hover:bg-blue-600 rounded-lg" >Contact</Link>
+                    className=" flex justify-center items-center text-center px-3 py-4 bg-blue-500 text-white w-[70px] m-auto hover:bg-blue-600 rounded-lg" >Contact</Link>
             </section>
         </div>
     )

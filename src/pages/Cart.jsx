@@ -1,15 +1,19 @@
 import { useContext } from "react";
 import DataContext from "./DataContext";
 import { IoIosAdd } from "react-icons/io";
+import axios from 'axios';
 
+axios.defaults.withCredentials = true;
+axios.defaults.baseURL = 'http://localhost:3500';
 const Cart = () => {
-    const { state, calculateTotalPrice, handleCart, handleRemove } = useContext(DataContext);
+    const { state, calculateTotalPrice, handleCart, handleRemove, handleOrder } = useContext(DataContext);
+
 
 
     return (
         <div
             id="cart-container"
-            className='flex justify-start flex-col md:flex-row gap-2 items-center'>
+            className='flex justify-start flex-col md:flex-row gap-2'>
 
             <ul
                 id="cart-ul"
@@ -39,7 +43,7 @@ const Cart = () => {
 
             <div
                 id="cart-div"
-                className='md:w-[35%] flex flex-col bg-yellow-400 rounded-l h-[100vh] mt-7 w-[100%] mb-5'>
+                className='md:w-[35%] flex flex-col bg-yellow-400 rounded-l h-[100vh] mt-7 w-[100%] mb-5 p-2'>
                 <h3 className='text-center my-4 font-extrabold font-serif capitalize'>Items in my Cart</h3>
                 <div className='grid grid-cols-4 gap-4 w-[100%] px-4'>
                     <p className='font-bold'>Item</p>
@@ -47,14 +51,14 @@ const Cart = () => {
                     <p className='font-bold'>Quantity</p>
 
                 </div>
-                <div className='w-[100%] flex flex-col mb-5 px-4'>
+                <div className='w-[100%] flex flex-col mb-5 px-2'>
                     {state.cartItems.length > 0 ? (
                         state.cartItems.map(item => (
                             <div key={item.id} className='grid grid-cols-4 gap-4 w-[100%] items-center mt-3 mb-2'>
                                 <img src={item.src} alt={item.title.item} className='w-fit h-[50px] rounded-lg' />
                                 <p className='font-semibold'>{item.title.price}/=</p>
                                 <p className='font-semibold'>{item.quantity}</p>
-                                <button className="p-2 bg-blue-500 rounded-lg text-white hover:bg-blue-400 hover:underline" onClick={() => handleRemove(item.id)}>Remove</button>
+                                <button className="text-center p-2 bg-blue-500 rounded-lg text-white hover:bg-blue-400 hover:underline" onClick={() => handleRemove(item.id)}>Remove</button>
                             </div>
                         ))
                     ) : (
@@ -64,7 +68,14 @@ const Cart = () => {
                 <hr />
                 <div className="px-4">
                     <p className="px-4 mt-5 text-center font-bold">TOTAL PRICE: {calculateTotalPrice()}/= Kshs</p>
+
                 </div>
+                <button
+                    onClick={handleOrder}
+                    className="bg-blue-500 hover:bg-blue-400 px-3 py-2 rounded-lg text-white mt-2"
+                >
+
+                    Place Order</button>
             </div>
 
         </div>

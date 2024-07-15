@@ -1,18 +1,21 @@
 import { Link, Outlet } from 'react-router-dom';
-
 import Header from '../pages/Header';
+import { useContext } from 'react';
+import DataContext from '../pages/DataContext';
 
 const RootLayout = () => {
-
-
-
+    const { user } = useContext(DataContext);
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
-
+    console.log(user);
 
     return (
         <div className='flex justify-around  flex-col w-[100%] text-l'>
             <Header />
+            <div className='flex justify-end flex-col p-3'>
+                <p>Hello {user}</p>
+                {/*userId && <p>Your user ID is : {userId}</p>*/}
+            </div>
 
 
             <main className='bg-white-900 w-[100%]'>

@@ -1,0 +1,1 @@
+import{j as e,L as t}from"./index-BxKS8aW1.js";const n=()=>e.jsxs("div",{className:"py-4 h-[100vh] flex flex-col items-center",children:[e.jsx("h1",{className:"text-center my-6 font-bold text-lg",children:"404 - Not Found"}),e.jsx(t,{className:"text-blue-600 underline mt-[50px] py-3 hover:no-underline",to:"/",children:"Visit homepage"})]});export{n as default};

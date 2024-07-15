@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer } from 'react';
+import React, { useState, createContext, useEffect, useReducer } from 'react';
 import product1 from '../assets/bread.jpg';
 import product2 from '../assets/butter.jpg';
 import product3 from '../assets/roasted.jpg';
@@ -10,7 +10,7 @@ import Energyballs from '../assets/energy_balls.jpg';
 import Noodles from '../assets/peanut_noodles.jpeg';
 import Smoothies from '../assets/peanut_butter_smoothie.jpeg';
 import Jelly from '../assets/pbj-s.jpeg';
-
+import axios from '../API/axios';
 
 
 import useWindowSize from '../components/useWindowSize';
@@ -29,7 +29,7 @@ const initialState = {
                 price: 1200
             },
             details: [
-                "Indulge in our largest jar yet – the 1.5 Kg Peanut Butter, crafted for those who crave an abundance of creamy, nutty goodness.",
+                "Indulge in our largest jar yet; the 1.5 Kg Peanut Butter, crafted for those who crave an abundance of creamy, nutty goodness.",
                 "Perfect for families or avid peanut butter lovers, this jumbo-sized jar ensures you never run out of your favorite spread.",
                 "Whether you're spreading it generously on toast, blending it into smoothies, or using it as a versatile ingredient in cooking and baking, our 1.5 Kg Peanut Butter delivers unmatched taste and satisfaction.",
                 "Made from the finest quality peanuts, it's a wholesome choice for your everyday snacking and meal needs."
@@ -379,13 +379,19 @@ const EventBus = {
         }
     }
 };
-
-
 export const DataProvider = ({ children }) => {
-
+    const [user, setUser] = useState(null);
     const [state, dispatch] = useReducer(reducer, initialState);
     const { width } = useWindowSize();
 
+
+    useEffect(() => {
+        // Retrieve user data from local storage
+        const storedUser = localStorage.getItem('user');
+        if (storedUser) {
+            setUser(JSON.parse(storedUser));
+        }
+    }, []);
     // Save cart items to localStorage whenever they change
     useEffect(() => {
         localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
@@ -410,10 +416,10 @@ export const DataProvider = ({ children }) => {
         dispatch({ type: 'newInputs', payload: event.target.value });
     };
 
-    const handleCart = (productId) => {
+    const handleCart = async (productId) => {
         dispatch({ type: 'addcart', payload: { productId } });
         alert('Add Item to cart');
-        console.log(state.cartItems)
+        await axios.post('/cart', state.cartItems);
         EventBus.emit('cartCountUpdated');
     };
 
@@ -422,6 +428,24 @@ export const DataProvider = ({ children }) => {
         alert('Item removed from Cart');
         EventBus.emit('cartCountUpdated');
     };
+
+    const handleOrder = async () => {
+        const orderDetails = {
+            items: state.cartItems,
+            totalPrice: calculateTotalPrice(),
+        };
+        try {
+            const response = await axios.post('/orders', orderDetails);
+            // Handle successful response
+            console.log("Order placed successfully:", response.data);
+        } catch (error) {
+            // Handle error
+            console.error("Error placing order:", error);
+        }
+
+    };
+
+
 
     const calculateTotalPrice = () => {
         if (state.cartItems.length === 0) {
@@ -448,9 +472,12 @@ export const DataProvider = ({ children }) => {
                 handleSubmit,
                 handleChange,
                 handleRemove,
+                handleOrder,
                 calculateTotalPrice,
                 width,
-                EventBus
+                EventBus,
+                user,
+                setUser
             }}
         >
             {children}
