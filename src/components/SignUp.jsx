@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { BsTwitterX } from "react-icons/bs";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaSnapchatSquare } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = 'http://localhost:3500'; // Adjust as per your backend URL
@@ -35,17 +41,18 @@ const SignUp = () => {
     return (
         <div
             className='flex justify-between items-center flex-col h-[100vh] p-3'>
-            <h1
-                id='header'
-                className='text-4xl text-center text-yellow-400 mb-[100px] p-6'>
-                <span className='text-extrabold'>Fralon</span> Peanuts
-            </h1>
+
             <div className='bg-black bg-opacity-10 backdrop-blur-sm p-6 rounded-lg text-center mb-3'>
+                <h1
+                    id='header'
+                    className='text-4xl text-center text-yellow-400 mb-[30px] p-6'>
+                    <span className='text-extrabold'>Fralon</span> Peanuts
+                </h1>
                 <form onSubmit={handleSubmit(handleSignUp)} className='flex flex-col items-center'>
-                    <h1 className='text-white font-bold mb-2'>Sign Up for an account</h1>
+                    <h1 className='text-black font-bold mb-2'>Sign Up for an account</h1>
 
                     <div className='flex justify-between flex-col mb-4 font-light'>
-                        <label className='text-white font-semibold' htmlFor="username">Username</label>
+                        <label className='text-black font-semibold' htmlFor="username">Username</label>
                         <input
                             className='px-10 py-2 rounded-sm'
                             type="text"
@@ -58,7 +65,7 @@ const SignUp = () => {
                     </div>
 
                     <div className='flex justify-between flex-col mb-4 font-light'>
-                        <label className='text-white font-semibold' htmlFor="email">Email</label>
+                        <label className='text-black font-semibold' htmlFor="email">Email</label>
                         <input
                             className='px-10 py-2 rounded-sm'
                             type="text"
@@ -75,7 +82,7 @@ const SignUp = () => {
                     </div>
 
                     <div className='flex justify-between flex-col mb-4 font-light'>
-                        <label className='text-white font-semibold' htmlFor="phoneNumber">Phone Number</label>
+                        <label className='text-black font-semibold' htmlFor="phoneNumber">Phone Number</label>
                         <input
                             className='px-10 py-2 rounded-sm'
                             type="text"
@@ -92,7 +99,7 @@ const SignUp = () => {
                     </div>
 
                     <div className='flex justify-between items-center flex-col mb-4 font-light'>
-                        <label className='text-white font-semibold' htmlFor="password">Password</label>
+                        <label className='text-black font-semibold' htmlFor="password">Password</label>
                         <input
                             className='px-10 py-2 rounded-sm'
                             type="password"
@@ -109,7 +116,7 @@ const SignUp = () => {
                     </div>
 
                     <div className='flex justify-between items-center flex-col mb-4 font-light'>
-                        <label className='text-white font-semibold' htmlFor="confirmPassword">Confirm Password</label>
+                        <label className='text-black font-semibold' htmlFor="confirmPassword">Confirm Password</label>
                         <input
                             className='px-10 py-2 rounded-sm'
                             type="password"
@@ -129,9 +136,16 @@ const SignUp = () => {
                         Sign Up
                     </button>
                     {signUpErrorMsg && <p className='text-red-600 mt-2'>{signUpErrorMsg}</p>}
-                    <Link to="/login" className='text-white mt-4 underline hover:no-underline font-bold'>
-                        Already have an account? Log In
-                    </Link>
+                    <p className='mt-4 '>Already have an account? <Link to="/login" className='text-blue-600 underline hover:no-underline font-bold'>
+                        Log In
+                    </Link></p>
+                    <div className='flex flex-row p-2 gap-6 items-center w-[100%] justify-center text-yellow-500 text-2xl mt-4'>
+                        <Link><FaFacebookSquare /></Link>
+                        <Link><FaInstagram /></Link>
+                        <Link> <BsTwitterX /></Link>
+                        <Link><FaSnapchatSquare /></Link>
+                        <Link><FaTiktok /></Link>
+                    </div>
                 </form>
             </div>
         </div>

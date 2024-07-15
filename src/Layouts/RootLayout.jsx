@@ -7,7 +7,6 @@ const RootLayout = () => {
     const { user } = useContext(DataContext);
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
-    console.log(user);
 
     return (
         <div className='flex justify-around  flex-col w-[100%] text-l'>

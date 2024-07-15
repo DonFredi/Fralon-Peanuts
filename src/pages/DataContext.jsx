@@ -446,7 +446,6 @@ export const DataProvider = ({ children }) => {
     };
 
 
-
     const calculateTotalPrice = () => {
         if (state.cartItems.length === 0) {
             return 0; // If cart is empty, return 0

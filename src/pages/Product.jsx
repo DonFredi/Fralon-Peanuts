@@ -10,13 +10,16 @@ const Product = () => {
     const { productId } = useParams();
     const { state, handleCart } = useContext(DataContext)
     const paramItem = state.products.find(item => item.id === parseInt(productId));
+    if (!paramItem) {
+        return <p className="text-center">Product not found!</p>;
+    }
 
 
     return (
         <div className='flex flex-col justify-start mb-[200px] p-6'>
             <Link
                 className=' bg-blue-600 w-[60px] p-3  hover:bg-blue-500 text-white rounded-3xl'
-                to='/products'> <IoArrowBackOutline /> </Link>
+                to='/fralon-peanuts/products'> <IoArrowBackOutline /> </Link>
 
             <div className='flex flex-col justify-evenly md:flex-row  px-6'>
                 <div className='flex justify-center w-[100%] md:w-[50%] items-center'>

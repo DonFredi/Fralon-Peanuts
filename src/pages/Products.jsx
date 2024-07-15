@@ -161,7 +161,7 @@ const Products = () => {
                         {state.products.map((item, index) => (
                             <Link
                                 key={index}
-                                to={`/product/${item.id}`}
+                                to={`/fralon-peanuts/product/${item.id}`}
                                 className='flex items-center justify-start flex-col text-center py-6 mt-6 px-7 gap-y-3 hover:bg-yellow-400 rounded-lg' >
                                 <img
                                     className='w-fit h-[200px]'
